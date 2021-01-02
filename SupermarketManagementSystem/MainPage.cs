@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace SupermarketManagementSystem
 {
-	public partial class Form1 : Form
-	{
-		public Form1()
-		{
-			InitializeComponent();
-		}
-
-		private void label1_Click(object sender, EventArgs e)
-		{
-
-		}
-	}
+    public partial class MainPage : Form
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+        }
+    }
 }

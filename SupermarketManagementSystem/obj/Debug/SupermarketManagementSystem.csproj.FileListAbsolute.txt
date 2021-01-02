@@ -8,3 +8,8 @@ C:\Users\Administrator\source\repos\SupermarketManagementSystem\SupermarketManag
 C:\Users\Administrator\source\repos\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\source\repos\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.exe
 C:\Users\Administrator\source\repos\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.pdb
+C:\Users\Administrator\source\repos\SupermarketManagementSystem\SupermarketManagementSystem\bin\Debug\EntityFramework.dll
+C:\Users\Administrator\source\repos\SupermarketManagementSystem\SupermarketManagementSystem\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Administrator\source\repos\SupermarketManagementSystem\SupermarketManagementSystem\bin\Debug\EntityFramework.xml
+C:\Users\Administrator\source\repos\SupermarketManagementSystem\SupermarketManagementSystem\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Administrator\source\repos\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.csproj.CopyComplete

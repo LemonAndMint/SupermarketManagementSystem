@@ -16,5 +16,12 @@ namespace SupermarketManagementSystem.database
 		public DbSet<Employee> Employees { get; set; }
 		public DbSet<Product> Products { get; set; }
 		public DbSet<Supplier> Suppliers { get; set; }
+
+		protected override void OnModelCreating(DbModelBuilder modelBuilder)
+		{
+			Database.SetInitializer<MngContext>(null);
+			base.OnModelCreating(modelBuilder);
+		}
+
 	}
 }

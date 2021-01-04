@@ -19,7 +19,7 @@ namespace SupermarketManagementSystem
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new Login());
 
-			using (var context = new MngContext())
+			/*using (var context = new MngContext())
 			{
 
 				Employee e = new Employee
@@ -31,7 +31,7 @@ namespace SupermarketManagementSystem
 				context.Employees.Add(e);
 				context.SaveChanges();
 
-			}
+			}*/
 			
 		}
 	}

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SupermarketManagementSystem.database;
 
 namespace SupermarketManagementSystem
 {
@@ -35,9 +36,11 @@ namespace SupermarketManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //çalışan kullanıcıadı-şifre aa 123
+            Employee emp = Employee.getEmployee(textUsername.Text, textPassword.Text);
+            
 
-
-            if (textUsername.Text == "ruveyda" && textPassword.Text == "market12") 
+            if (emp != null) 
             {
                 new MainPage().Show();
                 this.Hide();

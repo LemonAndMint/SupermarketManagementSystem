@@ -134,6 +134,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -159,8 +160,59 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubFormCari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFormCari.Designer.cs">
+      <DependentUpon>SubFormCari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFormcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFormcs.Designer.cs">
+      <DependentUpon>SubFormcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFormDebt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFormDebt.Designer.cs">
+      <DependentUpon>SubFormDebt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFormDebtReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFormDebtReport.Designer.cs">
+      <DependentUpon>SubFormDebtReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFormKarZarar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFormKarZarar.Designer.cs">
+      <DependentUpon>SubFormKarZarar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFormPesin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFormPesin.Designer.cs">
+      <DependentUpon>SubFormPesin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFormReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFormReport.Designer.cs">
+      <DependentUpon>SubFormReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFormStok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFormStok.Designer.cs">
+      <DependentUpon>SubFormStok.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -172,6 +224,30 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SubFormCari.resx">
+      <DependentUpon>SubFormCari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFormcs.resx">
+      <DependentUpon>SubFormcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFormDebt.resx">
+      <DependentUpon>SubFormDebt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFormDebtReport.resx">
+      <DependentUpon>SubFormDebtReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFormKarZarar.resx">
+      <DependentUpon>SubFormKarZarar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFormPesin.resx">
+      <DependentUpon>SubFormPesin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFormReport.resx">
+      <DependentUpon>SubFormReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFormStok.resx">
+      <DependentUpon>SubFormStok.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -209,6 +285,51 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\invisible-eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-tab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-tab2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-tab3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-invoice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-stock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-products.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-debt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

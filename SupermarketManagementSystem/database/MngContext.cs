@@ -9,7 +9,8 @@ namespace SupermarketManagementSystem.database
 {
 	class MngContext :DbContext
 	{
-		public MngContext() : base("MngContext") { }
+		//public MngContext() : base("MngContext") { }
+		public MngContext() : base("name=MngContext") { }
 		public DbSet<CustomerDebt> CustomerDebts { get; set; }
 		public DbSet<MarketDebt> MarketDebts { get; set; }
 		public DbSet<DebitSale> DebitSales { get; set; }
@@ -19,7 +20,7 @@ namespace SupermarketManagementSystem.database
 
 		protected override void OnModelCreating(DbModelBuilder modelBuilder)
 		{
-			Database.SetInitializer<MngContext>(null);
+			Database.SetInitializer<MngContext>(new DropCreateDatabaseIfModelChanges<MngContext>());
 			base.OnModelCreating(modelBuilder);
 		}
 

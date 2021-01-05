@@ -19,7 +19,7 @@ namespace SupermarketManagementSystem.database
 		public virtual Employee Employee { get; set; }
 		public virtual CustomerDebt CustomerDebt { get; set; }
 
-		public static DebitSale getDebitSale(string customer_no, string dpassword)
+		/*public static DebitSale getDebitSale(string customer_no)
 		{
 
 			DebitSale debitInfo;
@@ -27,12 +27,12 @@ namespace SupermarketManagementSystem.database
 			using (var context = new MngContext())
 			{
 
-				debitInfo = context.Employees.SqlQuery("Select username, password from Employees where username=@usr and password=@pwd", new SqlParameter("@usr", dusername), new SqlParameter("@pwd", dpassword)).FirstOrDefault<Employee>();
+				debitInfo = context.Employees.SqlQuery("Select sale_no, product_no, sale_date, payment_method from Employees where username=@usr and password=@pwd", new SqlParameter("@usr", dusername), new SqlParameter("@pwd", dpassword)).FirstOrDefault<Employee>();
 
 			}
 
 			return debitInfo;
-		}
+		}*/
 
 
 	}

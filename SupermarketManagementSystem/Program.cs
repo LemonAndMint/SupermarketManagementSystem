@@ -19,6 +19,8 @@ namespace SupermarketManagementSystem
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new Login());
 
+			//Employee.setEmployee("aa", "123");
+
 		}
 	}
 }

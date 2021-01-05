@@ -71,7 +71,6 @@ namespace SupermarketManagementSystem
             OpenSubForm(new SubFormCari());
             //sonra yazcağım kodlar...
 
-            HideSubmenu();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -79,7 +78,6 @@ namespace SupermarketManagementSystem
             OpenSubForm(new SubFormPesin());
             //sonra yazcağım kodlar...
 
-            HideSubmenu();
         }
 
         private void btnRapor_Click(object sender, EventArgs e)

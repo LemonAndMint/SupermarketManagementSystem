@@ -15,9 +15,13 @@ namespace SupermarketManagementSystem
 		public Login()
 		{
 			InitializeComponent();
-		}
 
-		
+		}
+        private void Login_Shown(object sender, EventArgs e)
+        {
+            textUsername.Focus();
+        }
+
         private void label1_Click(object sender, EventArgs e)
 		{
 
@@ -35,9 +39,12 @@ namespace SupermarketManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
+            LoginPage();
+        }
 
-
-            if (textUsername.Text == "ruveyda" && textPassword.Text == "market12") 
+        private void LoginPage()
+        {
+            if (textUsername.Text == "ruveyda" && textPassword.Text == "market12")
             {
                 new MainPage().Show();
                 this.Hide();
@@ -50,8 +57,6 @@ namespace SupermarketManagementSystem
                 textPassword.Clear();
                 textUsername.Focus();
             }
-
-            
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -79,6 +84,24 @@ namespace SupermarketManagementSystem
             {
                 showPassword.BringToFront();
                 textPassword.PasswordChar = '*';
+            }
+        }
+
+        private void textUsername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (textUsername.Focused == true && e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true; textPassword.Focus();
+
+            }
+
+        }
+
+        private void textPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (textPassword.Focused == true && e.KeyChar == (char)Keys.Enter)
+            {
+                 LoginPage(); e.Handled = true;
             }
         }
     }

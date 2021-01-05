@@ -19,20 +19,6 @@ namespace SupermarketManagementSystem
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new Login());
 
-			/*using (var context = new MngContext())
-			{
-
-				Employee e = new Employee
-				{
-					username = "aa",
-					password = "123",
-				};
-				Console.WriteLine(e.username);
-				context.Employees.Add(e);
-				context.SaveChanges();
-
-			}*/
-			
 		}
 	}
 }

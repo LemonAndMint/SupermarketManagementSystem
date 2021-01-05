@@ -290,6 +290,15 @@
     <None Include="obj\Debug\SupermarketManagementSystem.csproj.GenerateResource.cache" />
     <None Include="obj\Debug\SupermarketManagementSystem.csprojAssemblyReference.cache" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\SupermarketManagementSystem.database.CustomerDebt.datasource" />
+    <None Include="Properties\DataSources\SupermarketManagementSystem.database.DebitSale.datasource" />
+    <None Include="Properties\DataSources\SupermarketManagementSystem.database.Debt.datasource" />
+    <None Include="Properties\DataSources\SupermarketManagementSystem.database.Employee.datasource" />
+    <None Include="Properties\DataSources\SupermarketManagementSystem.database.MarketDebt.datasource" />
+    <None Include="Properties\DataSources\SupermarketManagementSystem.database.MngContext.datasource" />
+    <None Include="Properties\DataSources\SupermarketManagementSystem.database.Product.datasource" />
+    <None Include="Properties\DataSources\SupermarketManagementSystem.database.Sale.datasource" />
+    <None Include="Properties\DataSources\SupermarketManagementSystem.database.Supplier.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -450,6 +459,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

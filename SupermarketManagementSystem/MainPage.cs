@@ -183,5 +183,11 @@ namespace SupermarketManagementSystem
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            OpenSubForm(new SubFormTest());
+            HideSubmenu();
+        }
     }
 }

@@ -92,3 +92,4 @@ C:\Users\ruvey\OneDrive\Masaüstü\SupermarketManagementSystem\SupermarketManage
 C:\Users\ruvey\OneDrive\Masaüstü\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.SubFormDebtReport.resources
 C:\Users\ruvey\OneDrive\Masaüstü\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.SubFormKarZarar.resources
 C:\Users\ruvey\OneDrive\Masaüstü\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.SubFormReport.resources
+C:\Users\ruvey\OneDrive\Masaüstü\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.SubFormTest.resources

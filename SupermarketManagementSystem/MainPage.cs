@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.IO;
 
 namespace SupermarketManagementSystem
 {
@@ -119,7 +120,6 @@ namespace SupermarketManagementSystem
         private void btnUrunler_Click(object sender, EventArgs e)
         {
             OpenSubForm(new SubFormcs());
-            //sonra yazcağım kodlar...
 
             HideSubmenu();
         }
@@ -183,5 +183,9 @@ namespace SupermarketManagementSystem
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+
     }
+
+
 }

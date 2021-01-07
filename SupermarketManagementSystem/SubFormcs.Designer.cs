@@ -145,6 +145,7 @@ namespace SupermarketManagementSystem
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SubFormcs";
             this.Text = "SubFormcs";
+            this.Load += new System.EventHandler(this.SubFormcs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

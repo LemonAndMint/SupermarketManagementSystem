@@ -12,6 +12,7 @@ namespace SupermarketManagementSystem.database
 	class Employee
 	{
 		[Key]
+		public int emp_no { get; set; }
 		public string username { get; set; }
 		public string password { get; set; }
 
@@ -23,8 +24,22 @@ namespace SupermarketManagementSystem.database
 
 			using (var context = new MngContext()) {
 				
-				employeeInfo = context.Employees.SqlQuery("Select username, password from Employees where username=@usr and password=@pwd", new SqlParameter("@usr", dusername), new SqlParameter("@pwd", dpassword)).FirstOrDefault<Employee>();
+				employeeInfo = context.Employees.SqlQuery("Select emp_no, username, password from Employees where username=@usr and password=@pwd", new SqlParameter("@usr", dusername), new SqlParameter("@pwd", dpassword)).FirstOrDefault<Employee>();
 
+			}
+
+			return employeeInfo;
+		}
+
+		public static Employee getEmployeebyUsName(string dusername)
+		{
+
+			Employee employeeInfo;
+
+			using (var context = new MngContext())
+			{
+
+				employeeInfo = context.Employees.SqlQuery("Select emp_no, username, password from Employees where username=@usr", new SqlParameter("@usr", dusername)).FirstOrDefault<Employee>();
 			}
 
 			return employeeInfo;

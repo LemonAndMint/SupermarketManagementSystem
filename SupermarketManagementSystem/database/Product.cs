@@ -31,7 +31,7 @@ namespace SupermarketManagementSystem.database
 
 			using ( MngContext context = new MngContext()){
 
-				productInfo = context.Products.SqlQuery("Select barcode from Products where barcode=@bcd", new SqlParameter("@bcd", barcode)).FirstOrDefault<Product>();
+				productInfo = context.Products.SqlQuery("Select * from Products where barcode=@bcd", new SqlParameter("@bcd", barcode)).FirstOrDefault<Product>();
 
 			}
 
@@ -55,7 +55,8 @@ namespace SupermarketManagementSystem.database
 
 		public static void setProduct(int waybill_no, int barcode, 
 																	int supplier_no, int product_no, 
-																	int unit_input_price, int amount)
+																	int unit_input_price, int amount,
+																	int prize, DateTime debt_date)
 		{
 
 			if (getProductbyBarcode(barcode) == null)
@@ -72,6 +73,8 @@ namespace SupermarketManagementSystem.database
 						product_no = product_no,
 						unit_input_price = unit_input_price,
 						amount = amount,
+						MarketDebt = MarketDebt.setMDebt(barcode, prize, debt_date),
+						Supplier = Supplier.setSupplier(supplier_no),
 					};
 
 					context.Products.Add(p);

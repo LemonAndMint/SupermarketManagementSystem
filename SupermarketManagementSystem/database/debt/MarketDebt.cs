@@ -32,8 +32,8 @@ namespace SupermarketManagementSystem.database
 
 		}
 
-		public static void setMDebt( int barcode, int debt_amount,
-																 DateTime debt_date )
+		public static MarketDebt setMDebt(int barcode, int debt_amount,
+																			DateTime debt_date )
 		{
 			using (MngContext context = new MngContext())
 			{
@@ -48,6 +48,8 @@ namespace SupermarketManagementSystem.database
 
 				context.MarketDebts.Add(m);
 				context.SaveChanges();
+
+				return m;
 
 			}
 
@@ -72,7 +74,5 @@ namespace SupermarketManagementSystem.database
 		}
 
 	}
-
-
 
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace SupermarketManagementSystem.database
 {
 	class Employee
 	{
+		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		[Key]
 		public int emp_no { get; set; }
 		public string username { get; set; }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SupermarketManagementSystem.database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -44,7 +45,10 @@ namespace SupermarketManagementSystem
 
         private void LoginPage()
         {
-            if (textUsername.Text == "ruveyda" && textPassword.Text == "market12")
+            Employee emp = Employee.getEmployee(textUsername.Text, textPassword.Text);
+            
+
+            if (emp != null) 
             {
                 new MainPage().Show();
                 this.Hide();
@@ -57,6 +61,8 @@ namespace SupermarketManagementSystem
                 textPassword.Clear();
                 textUsername.Focus();
             }
+
+            
         }
 
         private void label2_Click(object sender, EventArgs e)

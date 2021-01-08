@@ -34,26 +34,23 @@ namespace SupermarketManagementSystem
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
+			this.employeeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
 			this.label4 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.textBox2 = new System.Windows.Forms.TextBox();
 			this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.supplierBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.employeeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-			this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.salesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// textBox1
 			// 
 			this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(205)))), ((int)(((byte)(147)))));
 			this.textBox1.Location = new System.Drawing.Point(77, 136);
-			this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.textBox1.Margin = new System.Windows.Forms.Padding(2);
 			this.textBox1.Multiline = true;
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(160, 53);
@@ -86,21 +83,19 @@ namespace SupermarketManagementSystem
 			// 
 			this.dataGridView1.AllowUserToAddRows = false;
 			this.dataGridView1.AllowUserToDeleteRows = false;
-			this.dataGridView1.AutoGenerateColumns = false;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.usernameDataGridViewTextBoxColumn,
-            this.passwordDataGridViewTextBoxColumn,
-            this.salesDataGridViewTextBoxColumn});
-			this.dataGridView1.DataSource = this.employeeBindingSource1;
 			this.dataGridView1.Location = new System.Drawing.Point(331, 136);
-			this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.ReadOnly = true;
 			this.dataGridView1.RowHeadersWidth = 51;
 			this.dataGridView1.RowTemplate.Height = 24;
 			this.dataGridView1.Size = new System.Drawing.Size(268, 248);
 			this.dataGridView1.TabIndex = 3;
+			// 
+			// employeeBindingSource1
+			// 
+			this.employeeBindingSource1.DataSource = typeof(SupermarketManagementSystem.database.Employee);
 			// 
 			// label4
 			// 
@@ -128,7 +123,7 @@ namespace SupermarketManagementSystem
 			// 
 			this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(205)))), ((int)(((byte)(147)))));
 			this.textBox2.Location = new System.Drawing.Point(77, 262);
-			this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.textBox2.Margin = new System.Windows.Forms.Padding(2);
 			this.textBox2.Multiline = true;
 			this.textBox2.Name = "textBox2";
 			this.textBox2.Size = new System.Drawing.Size(160, 53);
@@ -141,31 +136,6 @@ namespace SupermarketManagementSystem
 			// supplierBindingSource
 			// 
 			this.supplierBindingSource.DataSource = typeof(SupermarketManagementSystem.database.Supplier);
-			// 
-			// employeeBindingSource1
-			// 
-			this.employeeBindingSource1.DataSource = typeof(SupermarketManagementSystem.database.Employee);
-			// 
-			// usernameDataGridViewTextBoxColumn
-			// 
-			this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
-			this.usernameDataGridViewTextBoxColumn.HeaderText = "username";
-			this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
-			this.usernameDataGridViewTextBoxColumn.ReadOnly = true;
-			// 
-			// passwordDataGridViewTextBoxColumn
-			// 
-			this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
-			this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
-			this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-			this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
-			// 
-			// salesDataGridViewTextBoxColumn
-			// 
-			this.salesDataGridViewTextBoxColumn.DataPropertyName = "Sales";
-			this.salesDataGridViewTextBoxColumn.HeaderText = "Sales";
-			this.salesDataGridViewTextBoxColumn.Name = "salesDataGridViewTextBoxColumn";
-			this.salesDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// SubFormCari
 			// 
@@ -181,13 +151,13 @@ namespace SupermarketManagementSystem
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.textBox1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "SubFormCari";
 			this.Text = "SubFormCari";
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -204,9 +174,6 @@ namespace SupermarketManagementSystem
         private System.Windows.Forms.TextBox textBox2;
 		private System.Windows.Forms.BindingSource employeeBindingSource;
 		private System.Windows.Forms.BindingSource supplierBindingSource;
-		private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn salesDataGridViewTextBoxColumn;
 		private System.Windows.Forms.BindingSource employeeBindingSource1;
 	}
 }

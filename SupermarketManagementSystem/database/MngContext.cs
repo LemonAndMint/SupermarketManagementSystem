@@ -10,7 +10,6 @@ namespace SupermarketManagementSystem.database
 {
 	class MngContext :DbContext
 	{
-		//public MngContext() : base("MngContext") { }
 		public MngContext() : base("name=MngContext") { }
 		public DbSet<CustomerDebt> CustomerDebts { get; set; }
 		public DbSet<MarketDebt> MarketDebts { get; set; }

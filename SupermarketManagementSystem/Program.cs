@@ -16,8 +16,8 @@ namespace SupermarketManagementSystem
 		[STAThread]
 		static void Main()
 		{
-			/*Employee.setEmployee("aa", "123");
-			Product.setProduct(1, 2, 3, 4, 5, 6, 7, DateTime.Now);
+			Employee.setEmployee("aa", "123");
+			/*Product.setProduct(1, 2, 3, 4, 5, 6, 7, DateTime.Now);
 			CashSale.setCSale(1, 1, DateTime.Now, "nakit", "aa", 1);
 			DebitSale.setDSale(1,1,1,DateTime.Now,"nakit","aa",1,1);
 			Supplier.setSupplier(2);*/

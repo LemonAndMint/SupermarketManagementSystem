@@ -29,6 +29,7 @@ namespace SupermarketManagementSystem
 		/// </summary>
 		private void InitializeComponent()
 		{
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -66,6 +67,8 @@ namespace SupermarketManagementSystem
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(122)))), ((int)(((byte)(91)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Black", 12.8F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(56, 439);
@@ -115,6 +118,7 @@ namespace SupermarketManagementSystem
             this.textUsername.Name = "textUsername";
             this.textUsername.Size = new System.Drawing.Size(264, 23);
             this.textUsername.TabIndex = 11;
+            this.textUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textUsername_KeyPress);
             // 
             // textPassword
             // 
@@ -128,6 +132,7 @@ namespace SupermarketManagementSystem
             this.textPassword.PasswordChar = '*';
             this.textPassword.Size = new System.Drawing.Size(264, 23);
             this.textPassword.TabIndex = 12;
+            this.textPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textPassword_KeyPress);
             // 
             // label3
             // 
@@ -279,11 +284,13 @@ namespace SupermarketManagementSystem
             this.Controls.Add(this.hidePassword);
             this.Controls.Add(this.textPassword);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Login_Load);
+            this.Shown += new System.EventHandler(this.Login_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

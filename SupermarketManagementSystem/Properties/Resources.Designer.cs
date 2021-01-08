@@ -111,6 +111,18 @@ namespace SupermarketManagementSystem.Properties {
         }
         
         /// <summary>
+        ///   1/8697524862548/rice/50/9.75/101
+        ///2/8697524862549/bulghur/50/8.25/102
+        ///3/8697524862546/pasta/80/3.60/103
+        ///4/8697524862587/lentil/50/7.50/104 benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string deneme {
+            get {
+                return ResourceManager.GetString("deneme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
         internal static System.Drawing.Bitmap eye {

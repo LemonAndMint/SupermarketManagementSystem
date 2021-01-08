@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Reflection;
 
 namespace SupermarketManagementSystem
 {
@@ -33,7 +34,10 @@ namespace SupermarketManagementSystem
 
         private void Product_Import(object sender, EventArgs e)
         {
-            string[] lines = File.ReadAllLines(@"C:\Users\User\Desktop\products.txt");
+            String strAppPath = Path.GetDirectoryName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName);
+            String strFilePath = Path.Combine(strAppPath, "Resources");
+            String strFullFilename = Path.Combine(strFilePath, "products.txt");
+            string[] lines = File.ReadAllLines(strFullFilename);
             string[] values;
 
             for (int i = 0; i < lines.Length; i++)

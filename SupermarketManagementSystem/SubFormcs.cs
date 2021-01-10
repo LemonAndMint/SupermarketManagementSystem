@@ -28,6 +28,7 @@ namespace SupermarketManagementSystem
             table.Columns.Add("Quantify(package/kg)", typeof(int));
             table.Columns.Add("Unit Price(TL)", typeof(float));
             table.Columns.Add("Delivery No", typeof(int));
+            table.Columns.Add("Sale Price(TL)", typeof(float));
 
             dataGridView1.DataSource = table;
             Product_Import(sender, e);

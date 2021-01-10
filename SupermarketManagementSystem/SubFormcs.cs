@@ -56,7 +56,7 @@ namespace SupermarketManagementSystem
           row[j] = values[j].Trim();
         }
 
-        Product.setProduct(1, (int)long.Parse(row[1]), 3, int.Parse(row[0]), int.Parse(row[3]), 1, float.Parse(row[4]), DateTime.Now);
+        Product.setProduct(1, long.Parse(row[1]), 3, int.Parse(row[0]), int.Parse(row[3]), 1, float.Parse(row[4]), DateTime.Now);
         table.Rows.Add(row);
       }
     }

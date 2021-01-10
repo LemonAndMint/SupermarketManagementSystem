@@ -11,7 +11,7 @@ namespace SupermarketManagementSystem.database
 	{
 		
 		[Key]
-		public int barcode { get; set; }
+		public long barcode { get; set; }
 
 		[Required]
 		public virtual Product Product { get; set; }
@@ -24,7 +24,7 @@ namespace SupermarketManagementSystem.database
 			using (MngContext context = new MngContext())
 			{
 
-				debtInfo = context.MarketDebts.SqlQuery("Select amount from Products where payed=false").ToList();
+				debtInfo = context.MarketDebts.SqlQuery("Select * from Products where payed=false").ToList();
 
 			}
 
@@ -32,7 +32,7 @@ namespace SupermarketManagementSystem.database
 
 		}
 
-		public static MarketDebt setMDebt(int barcode, float debt_amount,
+		public static MarketDebt setMDebt(long barcode, float debt_amount,
 																			DateTime debt_date, Product prd )
 		{
 			using (MngContext context = new MngContext())

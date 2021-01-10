@@ -72,7 +72,7 @@ namespace SupermarketManagementSystem
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(160, 53);
 			this.textBox1.TabIndex = 3;
-			this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+			this.textBox1.TextChanged += new System.EventHandler(this.urun_barkod1_TextChanged_1);
 			// 
 			// label4
 			// 

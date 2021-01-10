@@ -14,17 +14,18 @@ namespace SupermarketManagementSystem.database
 
 		public int waybill_no { get; set; }
 		[Key]
-		public int barcode { get; set; }
+		public long barcode { get; set; }
 		public int supplier_no { get; set; }
 		public int product_no { get; set; }
 		public int unit_input_price { get; set; }
+		public float  prize { get; set; }
 		public int amount { get; set; }
 
 		public virtual MarketDebt MarketDebt { get; set; }
 		public virtual Sale Sale { get; set; }
 		public virtual Supplier Supplier { get; set; }
 
-		public static Product getProductbyBarcode(int barcode)
+		public static Product getProductbyBarcode(long barcode)
 		{
 
 			Product productInfo;
@@ -46,14 +47,14 @@ namespace SupermarketManagementSystem.database
 			using (MngContext context = new MngContext())
 			{
 
-				productInfo = context.Products.SqlQuery("Select product_no from Products where product_no=@pdcno", new SqlParameter("@pdcno", product_no)).FirstOrDefault<Product>();
+				productInfo = context.Products.SqlQuery("Select * from Products where product_no=@pdcno", new SqlParameter("@pdcno", product_no)).FirstOrDefault<Product>();
 
 			}
 
 			return productInfo;
 		}
 
-		public static void setProduct(int waybill_no, int barcode, 
+		public static void setProduct(int waybill_no, long barcode, 
 																	int supplier_no, int product_no, 
 																	int unit_input_price, int amount,
 																	float prize, DateTime debt_date)

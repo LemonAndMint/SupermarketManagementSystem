@@ -147,6 +147,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -188,6 +189,12 @@
     </Compile>
     <Compile Include="SubFormCari.Designer.cs">
       <DependentUpon>SubFormCari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFormCharts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFormCharts.Designer.cs">
+      <DependentUpon>SubFormCharts.cs</DependentUpon>
     </Compile>
     <Compile Include="SubFormcs.cs">
       <SubType>Form</SubType>
@@ -260,6 +267,9 @@
     </Compile>
     <EmbeddedResource Include="SubFormCari.resx">
       <DependentUpon>SubFormCari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFormCharts.resx">
+      <DependentUpon>SubFormCharts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubFormcs.resx">
       <DependentUpon>SubFormcs.cs</DependentUpon>

@@ -30,10 +30,9 @@ namespace SupermarketManagementSystem
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -47,28 +46,6 @@ namespace SupermarketManagementSystem
             this.label2.Size = new System.Drawing.Size(217, 41);
             this.label2.TabIndex = 2;
             this.label2.Text = "STOCK ENTRY";
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(65)))), ((int)(((byte)(59)))));
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(238, 152);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(468, 272);
-            this.panel1.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(150, 120);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "işlenecek ürünün bilgileri";
             // 
             // button1
             // 
@@ -85,20 +62,34 @@ namespace SupermarketManagementSystem
             this.button1.Text = "ADD";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(205)))), ((int)(((byte)(147)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(259, 205);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(415, 221);
+            this.dataGridView1.TabIndex = 5;
+            // 
             // SubFormStok
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(222)))), ((int)(((byte)(211)))));
             this.ClientSize = new System.Drawing.Size(983, 610);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SubFormStok";
             this.Text = "SubFormStok";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,8 +98,7 @@ namespace SupermarketManagementSystem
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

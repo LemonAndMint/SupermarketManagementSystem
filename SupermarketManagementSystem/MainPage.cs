@@ -184,7 +184,10 @@ namespace SupermarketManagementSystem
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-
+        private void button7_Click(object sender, EventArgs e)
+        {
+            OpenSubForm(new SubFormCharts());
+        }
     }
 
 

@@ -32,6 +32,7 @@ namespace SupermarketManagementSystem
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
             this.sideMenu = new System.Windows.Forms.Panel();
             this.panelSubMenuRapor = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -79,6 +80,7 @@ namespace SupermarketManagementSystem
             // 
             // panelSubMenuRapor
             // 
+            this.panelSubMenuRapor.Controls.Add(this.button7);
             this.panelSubMenuRapor.Controls.Add(this.button10);
             this.panelSubMenuRapor.Controls.Add(this.button9);
             this.panelSubMenuRapor.Controls.Add(this.button8);
@@ -87,6 +89,25 @@ namespace SupermarketManagementSystem
             this.panelSubMenuRapor.Name = "panelSubMenuRapor";
             this.panelSubMenuRapor.Size = new System.Drawing.Size(230, 166);
             this.panelSubMenuRapor.TabIndex = 7;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(222)))), ((int)(((byte)(211)))));
+            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(65)))), ((int)(((byte)(59)))));
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(0, 120);
+            this.button7.Name = "button7";
+            this.button7.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button7.Size = new System.Drawing.Size(230, 40);
+            this.button7.TabIndex = 3;
+            this.button7.Text = "Charts";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button10
             // 
@@ -430,5 +451,6 @@ namespace SupermarketManagementSystem
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button7;
     }
 }

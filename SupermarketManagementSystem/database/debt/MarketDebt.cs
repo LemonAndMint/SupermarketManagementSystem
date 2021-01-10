@@ -32,8 +32,8 @@ namespace SupermarketManagementSystem.database
 
 		}
 
-		public static MarketDebt setMDebt(int barcode, int debt_amount,
-																			DateTime debt_date )
+		public static MarketDebt setMDebt(int barcode, float debt_amount,
+																			DateTime debt_date, Product prd )
 		{
 			using (MngContext context = new MngContext())
 			{
@@ -44,6 +44,7 @@ namespace SupermarketManagementSystem.database
 					debt_amount = debt_amount,
 					debt_date = debt_date,
 					payed = false, //ürün stoğa eklendiğinde borç oluşur daima
+					Product = prd,
 				};
 
 				context.MarketDebts.Add(m);
@@ -55,11 +56,11 @@ namespace SupermarketManagementSystem.database
 
 		}
 
-		public static int totalMDebt()
+		public static float totalMDebt()
 		{
 			List<MarketDebt> marketDebts = getMDebtnonPayed();
 
-			int totalDebt = 0;
+			float totalDebt = 0;
 			
 			foreach (MarketDebt debt in marketDebts)
 			{

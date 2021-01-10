@@ -189,3 +189,4 @@ C:\Users\User\Desktop\SupermarketManagementSystem\SupermarketManagementSystem\ob
 C:\Users\User\Desktop\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.exe
 C:\Users\User\Desktop\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.pdb
 C:\Users\User\Desktop\SupermarketManagementSystem\SupermarketManagementSystem\bin\Debug\Resources\products.txt
+C:\Users\Administrator\source\repos\SupermarketManagementSystem\SupermarketManagementSystem\bin\Debug\Resources\products.txt

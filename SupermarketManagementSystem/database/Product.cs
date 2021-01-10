@@ -11,9 +11,9 @@ namespace SupermarketManagementSystem.database
 {
 	class Product
 	{
-		[Key, Column(Order = 0)]
+
 		public int waybill_no { get; set; }
-		[Key, Column(Order = 1)]
+		[Key]
 		public int barcode { get; set; }
 		public int supplier_no { get; set; }
 		public int product_no { get; set; }
@@ -56,7 +56,7 @@ namespace SupermarketManagementSystem.database
 		public static void setProduct(int waybill_no, int barcode, 
 																	int supplier_no, int product_no, 
 																	int unit_input_price, int amount,
-																	int prize, DateTime debt_date)
+																	float prize, DateTime debt_date)
 		{
 
 			if (getProductbyBarcode(barcode) == null)
@@ -73,9 +73,10 @@ namespace SupermarketManagementSystem.database
 						product_no = product_no,
 						unit_input_price = unit_input_price,
 						amount = amount,
-						MarketDebt = MarketDebt.setMDebt(barcode, prize, debt_date),
 						Supplier = Supplier.setSupplier(supplier_no),
 					};
+
+					p.MarketDebt = MarketDebt.setMDebt(barcode, prize, debt_date, p);
 
 					context.Products.Add(p);
 					context.SaveChanges();

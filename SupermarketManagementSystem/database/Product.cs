@@ -18,7 +18,7 @@ namespace SupermarketManagementSystem.database
 		public int supplier_no { get; set; }
 		public int product_no { get; set; }
 		public int unit_input_price { get; set; }
-		public float  prize { get; set; }
+		public float prize { get; set; }
 		public int amount { get; set; }
 
 		public virtual MarketDebt MarketDebt { get; set; }
@@ -74,6 +74,7 @@ namespace SupermarketManagementSystem.database
 						product_no = product_no,
 						unit_input_price = unit_input_price,
 						amount = amount,
+						prize = prize,
 						Supplier = Supplier.setSupplier(supplier_no),
 					};
 

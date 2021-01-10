@@ -72,7 +72,7 @@ namespace SupermarketManagementSystem
 
     private void urun_barkod_KeyDown(object sender, KeyEventArgs e)
     {
-      if (e.KeyCode == Keys.Enter)
+      /*if (e.KeyCode == Keys.Enter)
       {
         try
         {
@@ -90,7 +90,7 @@ namespace SupermarketManagementSystem
             {
                 table.Rows.Add(Product.getProductbyBarcode(barcode).product_no);
                 dataGridView1.DataSource = table;
-            }*/
+            }
 
 
 
@@ -107,9 +107,7 @@ namespace SupermarketManagementSystem
 
         }
 
-      }
-
-
+      }*/
 
     }
   }

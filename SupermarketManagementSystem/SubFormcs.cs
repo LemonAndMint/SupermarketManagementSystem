@@ -50,8 +50,9 @@ namespace SupermarketManagementSystem
         foreach (Product p in prdts)
         {
           string[] row = {(p.product_no).ToString(), (p.barcode).ToString(),
-                                      p.product_name, (p.unit_input_price).ToString(),
-                                      (p.prize).ToString(), (p.waybill_no).ToString()};
+                                      p.product_name, (p.amount).ToString(),
+                                      (p.unit_input_price).ToString(), (p.waybill_no).ToString(),
+                                      (p.prize).ToString()};
           table.Rows.Add(row);
         }
       }

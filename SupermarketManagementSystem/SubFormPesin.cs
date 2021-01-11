@@ -20,95 +20,80 @@ namespace SupermarketManagementSystem
     DataTable table = new DataTable();
     private void SubFormPesin_Load(object sender, EventArgs e)
     {
-      table.Columns.Add("Product Id", typeof(int));
-      table.Columns.Add("Barcode", typeof(long));
-      //table.Columns.Add("Unit Price(TL)", typeof(float));ss
 
-      dataGridView1.DataSource = table;
+            table.Columns.Add("Barcode No", typeof(int));
+            table.Columns.Add("Product No", typeof(int));
+            table.Columns.Add("Unit Input Price", typeof(int));
+            table.Columns.Add("Amount", typeof(int));
 
-    }
+            dataGridView1.DataSource = table;
+
+        }
     private void button1_Click(object sender, EventArgs e)
     {
-      try
-      {
-        //long barcode = Convert.ToInt64(urun_barkod1.Text);
-        //long barcode = Convert.ToInt64(urun_barkod1.Text);
-        Product product = Product.getProductbyBarcode(2);
-
-        if (product == null)
-        {
-          //MessageBox.Show("Bu Barkoda Ait Ürün Bulunmamaktadır", "ERROR");
-        }
-        else
-        {
-
-          table.Rows.Add(product.product_no);
-          table.Rows.Add(product.barcode);
-          dataGridView1.DataSource = table;
-
-        }
-
-
-      }
-
-
-      catch (Exception EX)
-      {
-        MessageBox.Show(EX.Message, "FRMARKETOTOMASYONU");
-
-      }
 
     }
 
-    private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-    {
+    
 
-    }
-
-    private void urun_barkod1_TextChanged_1(object sender, EventArgs e)
-    {
-
-    }
-
-    private void urun_barkod_KeyDown(object sender, KeyEventArgs e)
-    {
-      /*if (e.KeyCode == Keys.Enter)
-      {
-        try
-        {
-          //long barcode = Convert.ToInt64(urun_barkod1.Text);
-          //long barcode = Convert.ToInt64(urun_barkod1.Text);
-          Product product = Product.getProductbyBarcode(8697524862546);
-
-          if (product == null)
-          {
-            MessageBox.Show("Bu Barkoda Ait Ürün Bulunmamaktadır", "ERROR");
-          }
-          else
-          {
-            /*if (Product.getProductbyBarcode(barcode).product_no == null)
+     public void hesapla()
+     {
+            int toplam = 0;
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
-                table.Rows.Add(Product.getProductbyBarcode(barcode).product_no);
-                dataGridView1.DataSource = table;
+                toplam += Convert.ToInt32(dataGridView1.Rows[i].Cells[2].Value) * Convert.ToInt32(dataGridView1.Rows[i].Cells[3].Value);
             }
+            label5.Text = toplam.ToString();
+      }
 
 
-
-
-          }
-
-
-        }
-
-
-        catch (Exception EX)
+        private void urun_barkod(object sender, KeyEventArgs e)
         {
-          MessageBox.Show(EX.Message, "FRMARKETOTOMASYONU");
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                try
+                {
+
+                    int barcode = Convert.ToInt32(urun_barkod1.Text);
+                    Product product = Product.getProductbyBarcode(barcode);
+
+                    if (product == null)
+                    {
+                        MessageBox.Show("Bu Barkoda Ait Ürün Bulunmamaktadır", "ERROR");
+                    }
+                    else
+                    {
+
+                        table.Rows.Add(Product.getProductbyBarcode(barcode).barcode, Product.getProductbyBarcode(barcode).product_no, Product.getProductbyBarcode(barcode).unit_input_price, Product.getProductbyBarcode(barcode).amount);
+                        dataGridView1.DataSource = table;
+                        urun_barkod1.Text = "";
+                        //hesapla();
+                    }
+                }
+                catch (Exception EX)
+                {
+                    MessageBox.Show(EX.Message, "FRMARKETOTOMASYONU");
+
+                }
+
+            }
+        }
+
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
 
-      }*/
+        private void urun_barkod1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+        private void SubFormPesin_Load_1(object sender, EventArgs e)
+        {
+
+        }
 
     }
-  }
 }

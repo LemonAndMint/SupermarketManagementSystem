@@ -18,23 +18,19 @@ namespace SupermarketManagementSystem
       InitializeComponent();
     }
     DataTable table = new DataTable();
-    private void SubFormPesin_Load(object sender, EventArgs e)
+    private void SubFormPesin_Load_1(object sender, EventArgs e)
     {
+      table.Columns.Add("Barcode No", typeof(int));
+      table.Columns.Add("Product No", typeof(int));
+      table.Columns.Add("Unit Input Price", typeof(int));
+      table.Columns.Add("Amount", typeof(int));
 
-            table.Columns.Add("Barcode No", typeof(int));
-            table.Columns.Add("Product No", typeof(int));
-            table.Columns.Add("Unit Input Price", typeof(int));
-            table.Columns.Add("Amount", typeof(int));
-
-            dataGridView1.DataSource = table;
-
-        }
+      dataGridView1.DataSource = table;
+    }
     private void button1_Click(object sender, EventArgs e)
     {
-
+      hesapla();
     }
-
-    
 
      public void hesapla()
      {
@@ -50,7 +46,18 @@ namespace SupermarketManagementSystem
         private void urun_barkod(object sender, KeyEventArgs e)
         {
 
-            if (e.KeyCode == Keys.Enter)
+            
+        }
+
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void urun_barkod1_TextChanged_1(object sender, KeyEventArgs e)
+        {
+        if (e.KeyCode == Keys.Enter)
             {
                 try
                 {
@@ -65,7 +72,7 @@ namespace SupermarketManagementSystem
                     else
                     {
 
-                        table.Rows.Add(Product.getProductbyBarcode(barcode).barcode, Product.getProductbyBarcode(barcode).product_no, Product.getProductbyBarcode(barcode).unit_input_price, Product.getProductbyBarcode(barcode).amount);
+                        table.Rows.Add(barcode, product.product_no, product.unit_input_price, product.amount);
                         dataGridView1.DataSource = table;
                         urun_barkod1.Text = "";
                         //hesapla();
@@ -79,21 +86,7 @@ namespace SupermarketManagementSystem
 
             }
         }
-
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void urun_barkod1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-        private void SubFormPesin_Load_1(object sender, EventArgs e)
-        {
-
-        }
+        
 
     }
 }

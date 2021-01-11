@@ -70,8 +70,8 @@ namespace SupermarketManagementSystem
             this.urun_barkod1.Name = "urun_barkod1";
             this.urun_barkod1.Size = new System.Drawing.Size(212, 64);
             this.urun_barkod1.TabIndex = 3;
-            this.urun_barkod1.TextChanged += new System.EventHandler(this.urun_barkod1_TextChanged_1);
-            this.urun_barkod1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.urun_barkod);
+            //this.urun_barkod1.TextChanged += new System.EventHandler(this.urun_barkod1_TextChanged_1);
+            this.urun_barkod1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.urun_barkod1_TextChanged_1);
             // 
             // label4
             // 

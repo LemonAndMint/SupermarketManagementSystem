@@ -292,6 +292,10 @@
     <EmbeddedResource Include="SubFormStok.resx">
       <DependentUpon>SubFormStok.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include=".vs\ProjectSettings.json" />
+    <None Include=".vs\slnx.sqlite" />
+    <None Include=".vs\SupermarketManagementSystem\v16\.suo" />
+    <None Include=".vs\VSWorkspaceState.json" />
     <None Include="bin\Debug\SupermarketManagementSystem.exe.config" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />

@@ -50,7 +50,7 @@ namespace SupermarketManagementSystem
 			this.dataGridView1.RowTemplate.Height = 24;
 			this.dataGridView1.Size = new System.Drawing.Size(636, 275);
 			this.dataGridView1.TabIndex = 0;
-			this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+			this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
 			// 
 			// label1
 			// 
@@ -80,6 +80,7 @@ namespace SupermarketManagementSystem
 			this.button2.TabIndex = 3;
 			this.button2.Text = "DELETE";
 			this.button2.UseVisualStyleBackColor = false;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// button3
 			// 

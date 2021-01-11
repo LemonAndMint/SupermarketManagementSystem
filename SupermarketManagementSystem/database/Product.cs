@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -11,21 +12,23 @@ namespace SupermarketManagementSystem.database
 {
 	class Product
 	{
-
-		public int waybill_no { get; set; }
 		[Key]
-		public long barcode { get; set; }
+		public int entry_no { get; set; }
+		public int waybill_no { get; set; }
+		public int barcode { get; set; }
 		public int supplier_no { get; set; }
 		public int product_no { get; set; }
 		public int unit_input_price { get; set; }
 		public float prize { get; set; }
 		public int amount { get; set; }
+		public string product_name { get; set; }
 
+		[Required]
 		public virtual MarketDebt MarketDebt { get; set; }
 		public virtual Sale Sale { get; set; }
 		public virtual Supplier Supplier { get; set; }
 
-		public static Product getProductbyBarcode(long barcode)
+		public static Product getProductbyBarcode(int barcode)
 		{
 
 			Product productInfo;
@@ -54,14 +57,49 @@ namespace SupermarketManagementSystem.database
 			return productInfo;
 		}
 
-		public static void setProduct(int waybill_no, long barcode, 
+		public static List<Product> getAllProduct()
+		{ //toplam market borcu
+
+			List<Product> ProductInfo;
+
+			using (MngContext context = new MngContext())
+			{
+
+				ProductInfo = context.Products.SqlQuery("Select * from Products").ToList();
+
+			}
+
+			return ProductInfo;
+
+		}
+
+		public static void delProductByBarcode(int barcode) {
+
+			Product del_product = getProductbyBarcode(barcode);
+
+			if (del_product != null)
+			{
+				using (MngContext context = new MngContext())
+				{
+					context.Products.Attach(del_product);
+					context.Products.Remove(del_product);
+					context.SaveChanges();
+				}
+			}
+
+		}
+
+		public static void setProduct(int waybill_no, int barcode, 
 																	int supplier_no, int product_no, 
 																	int unit_input_price, int amount,
-																	float prize, DateTime debt_date)
+																	float prize, DateTime debt_date,
+																	string product_name)
 		{
 
 			if (getProductbyBarcode(barcode) == null)
 			{ //eklenecek ürünün database de olup olmadığınıa bakılır. 
+
+				Supplier sup = Supplier.setSupplier(supplier_no);
 
 				using (MngContext context = new MngContext())
 				{
@@ -75,10 +113,10 @@ namespace SupermarketManagementSystem.database
 						unit_input_price = unit_input_price,
 						amount = amount,
 						prize = prize,
-						Supplier = Supplier.setSupplier(supplier_no),
-					};
-
-					p.MarketDebt = MarketDebt.setMDebt(barcode, prize, debt_date, p);
+						product_name = product_name,
+						Supplier = sup,
+						MarketDebt = MarketDebt.setMDebt(prize, debt_date),
+				};
 
 					context.Products.Add(p);
 					context.SaveChanges();

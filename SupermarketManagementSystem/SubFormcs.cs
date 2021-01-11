@@ -15,6 +15,7 @@ namespace SupermarketManagementSystem
 {
     public partial class SubFormcs : Form
     {
+    string barcode;
         public SubFormcs()
         {
             InitializeComponent();
@@ -31,34 +32,40 @@ namespace SupermarketManagementSystem
 
             dataGridView1.DataSource = table;
             Product_Import(sender, e);
-        }
+            loadDatabaseProduct();
+    }
 
         private void Product_Import(object sender, EventArgs e)
         {
             
         }
 
-		private void button1_Click(object sender, EventArgs e)
+    private void loadDatabaseProduct()
 		{
-      String strAppPath = Path.GetDirectoryName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName);
-      String strFilePath = Path.Combine(strAppPath, "Resources");
-      String strFullFilename = Path.Combine(strFilePath, "products.txt");
-      string[] lines = File.ReadAllLines(strFullFilename);
-      string[] values;
+    List<Product> prdts = Product.getAllProduct();
 
-      for (int i = 0; i < lines.Length; i++)
+      if (prdts != null)
       {
-        values = lines[i].ToString().Split('/');
-        string[] row = new string[values.Length];
-
-        for (int j = 0; j < values.Length; j++)
+        foreach (Product p in prdts)
         {
-          row[j] = values[j].Trim();
+          string[] row = {(p.product_no).ToString(), (p.barcode).ToString(),
+                                      p.product_name, (p.unit_input_price).ToString(),
+                                      (p.prize).ToString(), (p.waybill_no).ToString()};
+          table.Rows.Add(row);
         }
-
-        Product.setProduct(1, long.Parse(row[1]), 3, int.Parse(row[0]), int.Parse(row[3]), 1, float.Parse(row[4]), DateTime.Now);
-        table.Rows.Add(row);
       }
+		}
+
+    private void removeDatabase()
+		{
+      table.Rows.Clear();
+    }
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+      Product.delProductByBarcode(int.Parse(barcode));
+      removeDatabase();
+      loadDatabaseProduct();
     }
 
 		private void button3_Click(object sender, EventArgs e)
@@ -66,9 +73,10 @@ namespace SupermarketManagementSystem
 
 		}
 
-		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
 		{
-
+      barcode = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+      MessageBox.Show(barcode);
 		}
 	}
 }

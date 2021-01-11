@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace SupermarketManagementSystem.database
 {
-	class MarketDebt : Debt	
+	class MarketDebt : Debt
 	{
-		
 		[Key]
-		public long barcode { get; set; }
-
-		[Required]
+		public int m_debt_no { get; set; }
+		
 		public virtual Product Product { get; set; }
 
 		public static List<MarketDebt> getMDebtnonPayed() 
@@ -24,7 +23,7 @@ namespace SupermarketManagementSystem.database
 			using (MngContext context = new MngContext())
 			{
 
-				debtInfo = context.MarketDebts.SqlQuery("Select * from Products where payed=false").ToList();
+				debtInfo = context.MarketDebts.SqlQuery("Select * from MarketDebts where payed=false").ToList();
 
 			}
 
@@ -32,19 +31,17 @@ namespace SupermarketManagementSystem.database
 
 		}
 
-		public static MarketDebt setMDebt(long barcode, float debt_amount,
-																			DateTime debt_date, Product prd )
+		public static MarketDebt setMDebt(float debt_amount,
+																			DateTime debt_date)
 		{
 			using (MngContext context = new MngContext())
 			{
 
 				MarketDebt m = new MarketDebt
 				{
-					barcode = barcode,
 					debt_amount = debt_amount,
 					debt_date = debt_date,
 					payed = false, //ürün stoğa eklendiğinde borç oluşur daima
-					Product = prd,
 				};
 
 				context.MarketDebts.Add(m);

@@ -57,7 +57,7 @@ namespace SupermarketManagementSystem
 			this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
 			this.button1.ForeColor = System.Drawing.Color.White;
 			this.button1.Location = new System.Drawing.Point(269, 379);
-			this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.button1.Margin = new System.Windows.Forms.Padding(2);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(159, 52);
 			this.button1.TabIndex = 4;
@@ -74,12 +74,13 @@ namespace SupermarketManagementSystem
 			this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Location = new System.Drawing.Point(194, 167);
-			this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.RowHeadersWidth = 51;
 			this.dataGridView1.RowTemplate.Height = 24;
 			this.dataGridView1.Size = new System.Drawing.Size(311, 180);
 			this.dataGridView1.TabIndex = 5;
+			this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
 			// 
 			// SubFormStok
 			// 
@@ -91,7 +92,7 @@ namespace SupermarketManagementSystem
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.label2);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "SubFormStok";
 			this.Text = "SubFormStok";
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -21,7 +21,7 @@ namespace SupermarketManagementSystem.database
 
 		protected override void OnModelCreating(DbModelBuilder modelBuilder)
 		{
-			Database.SetInitializer<MngContext>(new DropCreateDatabaseIfModelChanges<MngContext>());
+			Database.SetInitializer<MngContext>(new DropCreateDatabaseAlways<MngContext>());
 			base.OnModelCreating(modelBuilder);
 		}
 

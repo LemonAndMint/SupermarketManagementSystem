@@ -162,3 +162,4 @@ C:\Users\ruvey\OneDrive\Masaüstü\SupermarketManagementSystem\SupermarketManage
 C:\Users\ruvey\OneDrive\Masaüstü\SupermarketManagementSystem\SupermarketManagementSystem\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\ruvey\OneDrive\Masaüstü\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.SubFormCharts.resources
 C:\Users\Administrator\source\repos\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.SubFormCharts.resources
+C:\Users\User\Desktop\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.SubFormCharts.resources

@@ -31,6 +31,7 @@ namespace SupermarketManagementSystem
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
             this.sideMenu = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.panelSubMenuRapor = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
@@ -64,6 +65,7 @@ namespace SupermarketManagementSystem
             // 
             this.sideMenu.AutoScroll = true;
             this.sideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(205)))), ((int)(((byte)(147)))));
+            this.sideMenu.Controls.Add(this.btnLogout);
             this.sideMenu.Controls.Add(this.panelSubMenuRapor);
             this.sideMenu.Controls.Add(this.btnRapor);
             this.sideMenu.Controls.Add(this.btnStok);
@@ -77,6 +79,25 @@ namespace SupermarketManagementSystem
             this.sideMenu.Name = "sideMenu";
             this.sideMenu.Size = new System.Drawing.Size(251, 682);
             this.sideMenu.TabIndex = 0;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(65)))), ((int)(((byte)(59)))));
+            this.btnLogout.Image = global::SupermarketManagementSystem.Properties.Resources.logout__1_1;
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLogout.Location = new System.Drawing.Point(0, 692);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnLogout.Size = new System.Drawing.Size(230, 58);
+            this.btnLogout.TabIndex = 8;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // panelSubMenuRapor
             // 
@@ -452,5 +473,6 @@ namespace SupermarketManagementSystem
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

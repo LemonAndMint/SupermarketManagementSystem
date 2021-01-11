@@ -470,6 +470,7 @@
     <Content Include="obj\Debug\SupermarketManagementSystem.exe" />
     <Content Include="obj\Debug\SupermarketManagementSystem.pdb" />
     <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <None Include="Resources\logout %281%291.png" />
     <None Include="Resources\deneme.txt" />
     <None Include="Resources\products.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

@@ -18,7 +18,7 @@ namespace SupermarketManagementSystem.database
 		public int barcode { get; set; }
 		public int supplier_no { get; set; }
 		public int product_no { get; set; }
-		public int unit_input_price { get; set; }
+		public float unit_input_price { get; set; }
 		public float prize { get; set; }
 		public int amount { get; set; }
 		public string product_name { get; set; }
@@ -91,7 +91,7 @@ namespace SupermarketManagementSystem.database
 
 		public static void setProduct(int waybill_no, int barcode, 
 																	int supplier_no, int product_no, 
-																	int unit_input_price, int amount,
+																	float unit_input_price, int amount,
 																	float prize, DateTime debt_date,
 																	string product_name)
 		{

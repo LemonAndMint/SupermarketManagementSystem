@@ -76,7 +76,9 @@ namespace SupermarketManagementSystem
         {
           row[j] = values[j].Trim();
         }
-        Product.setProduct(1, int.Parse(row[1]), 3, int.Parse(row[0]), int.Parse(row[3]), 1, float.Parse(row[4], CultureInfo.InvariantCulture.NumberFormat), DateTime.Now, row[2]);
+        Product.setProduct(int.Parse(row[5]), int.Parse(row[1]), 3, 
+                           int.Parse(row[0]), float.Parse(row[4], CultureInfo.InvariantCulture.NumberFormat), int.Parse(row[3]), 
+                           float.Parse(row[6], CultureInfo.InvariantCulture.NumberFormat), DateTime.Now, row[2]);
         
       }
       loadDatabaseProduct();

@@ -25,7 +25,7 @@ namespace SupermarketManagementSystem
 
             for (int i = 11; i < 87; i++)
             {
-                int girdi_fiyati = Product.getProductbyProductNo(i).unit_input_price;
+                float girdi_fiyati = Product.getProductbyProductNo(i).unit_input_price;
                 float satis_fiyati = Product.getProductbyProductNo(i).prize;
             
                 if((satis_fiyati - girdi_fiyati) > 0)

@@ -18,6 +18,9 @@ namespace SupermarketManagementSystem
         {
             InitializeComponent();
             Submenu();
+            timer1.Start();
+            label2.Text = DateTime.Now.ToLongDateString();
+            label3.Text = DateTime.Now.ToLongTimeString();
         }
 
         private void Submenu()
@@ -56,7 +59,7 @@ namespace SupermarketManagementSystem
         private void button5_Click(object sender, EventArgs e)
         {
             OpenSubForm(new SubFormDebt());
-            //sonra yazcağım kodlar...
+            panel2.Visible = false;
 
             HideSubmenu();
         }
@@ -64,50 +67,34 @@ namespace SupermarketManagementSystem
         private void btnSatis_Click(object sender, EventArgs e)
         {
             ShowSubmenu(panelSubMenuSatis);
+            panel2.Visible = true;
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             OpenSubForm(new SubFormCari());
-            //sonra yazcağım kodlar...
+            panel2.Visible = false;
 
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             OpenSubForm(new SubFormPesin());
-            //sonra yazcağım kodlar...
+            panel2.Visible = false;
 
         }
 
         private void btnRapor_Click(object sender, EventArgs e)
         {
             ShowSubmenu(panelSubMenuRapor);
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            OpenSubForm(new SubFormDebtReport());
-            //sonra yazcağım kodlar...
-
-            HideSubmenu();
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            OpenSubForm(new SubFormKarZarar());
-            //sonra yazcağım kodlar...
-
-            HideSubmenu();
+            panel2.Visible = true;
         }
 
         private void button10_Click_1(object sender, EventArgs e)
         {
             OpenSubForm(new SubFormReport());
-            //sonra yazcağım kodlar...
-
-            HideSubmenu();
+            panel2.Visible = false;
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -120,14 +107,14 @@ namespace SupermarketManagementSystem
         private void btnUrunler_Click(object sender, EventArgs e)
         {
             OpenSubForm(new SubFormcs());
-
+            panel2.Visible = false;
             HideSubmenu();
         }
 
         private void btnStok_Click(object sender, EventArgs e)
         {
             OpenSubForm(new SubFormStok());
-            //sonra yazcağım kodlar...
+            panel2.Visible = false;
 
             HideSubmenu();
         }
@@ -187,12 +174,19 @@ namespace SupermarketManagementSystem
         private void button7_Click(object sender, EventArgs e)
         {
             OpenSubForm(new SubFormCharts());
+            panel2.Visible = false;
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
             this.Close();
             new Login().Show();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label3.Text = DateTime.Now.ToLongTimeString();
+            timer1.Start();
         }
     }
 

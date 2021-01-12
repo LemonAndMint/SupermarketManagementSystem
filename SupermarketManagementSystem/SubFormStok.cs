@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -28,6 +29,23 @@ namespace SupermarketManagementSystem
     private void Product_Import(object sender, EventArgs e)
     {
 
+    }
+
+    private void loadDatabaseProduct()
+    {
+      List<Product> prdts = Product.getAllProduct();
+
+      if (prdts != null)
+      {
+        foreach (Product p in prdts)
+        {
+          string[] row = {(p.product_no).ToString(), (p.barcode).ToString(),
+                                      p.product_name, (p.amount).ToString(),
+                                      (p.unit_input_price).ToString(), (p.waybill_no).ToString(),
+                                      (p.prize).ToString()};
+          table.Rows.Add(row);
+        }
+      }
     }
 
     private void button1_Click(object sender, EventArgs e)
@@ -58,10 +76,10 @@ namespace SupermarketManagementSystem
         {
           row[j] = values[j].Trim();
         }
-
-        Product.setProduct(1, int.Parse(row[1]), 3, int.Parse(row[0]), int.Parse(row[3]), 1, float.Parse(row[4]), DateTime.Now, row[2]);
-        table.Rows.Add(row);
+        Product.setProduct(1, int.Parse(row[1]), 3, int.Parse(row[0]), int.Parse(row[3]), 1, float.Parse(row[4], CultureInfo.InvariantCulture.NumberFormat), DateTime.Now, row[2]);
+        
       }
+      loadDatabaseProduct();
     }
 
 		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

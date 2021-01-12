@@ -208,18 +208,6 @@
     <Compile Include="SubFormDebt.Designer.cs">
       <DependentUpon>SubFormDebt.cs</DependentUpon>
     </Compile>
-    <Compile Include="SubFormDebtReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SubFormDebtReport.Designer.cs">
-      <DependentUpon>SubFormDebtReport.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SubFormKarZarar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SubFormKarZarar.Designer.cs">
-      <DependentUpon>SubFormKarZarar.cs</DependentUpon>
-    </Compile>
     <Compile Include="SubFormPesin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -250,8 +238,6 @@
     <EmbeddedResource Include="obj\Debug\SupermarketManagementSystem.SubFormCari.resources" />
     <EmbeddedResource Include="obj\Debug\SupermarketManagementSystem.SubFormcs.resources" />
     <EmbeddedResource Include="obj\Debug\SupermarketManagementSystem.SubFormDebt.resources" />
-    <EmbeddedResource Include="obj\Debug\SupermarketManagementSystem.SubFormDebtReport.resources" />
-    <EmbeddedResource Include="obj\Debug\SupermarketManagementSystem.SubFormKarZarar.resources" />
     <EmbeddedResource Include="obj\Debug\SupermarketManagementSystem.SubFormPesin.resources" />
     <EmbeddedResource Include="obj\Debug\SupermarketManagementSystem.SubFormReport.resources" />
     <EmbeddedResource Include="obj\Debug\SupermarketManagementSystem.SubFormStok.resources" />
@@ -276,12 +262,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SubFormDebt.resx">
       <DependentUpon>SubFormDebt.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SubFormDebtReport.resx">
-      <DependentUpon>SubFormDebtReport.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SubFormKarZarar.resx">
-      <DependentUpon>SubFormKarZarar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubFormPesin.resx">
       <DependentUpon>SubFormPesin.cs</DependentUpon>
@@ -470,6 +450,7 @@
     <Content Include="obj\Debug\SupermarketManagementSystem.exe" />
     <Content Include="obj\Debug\SupermarketManagementSystem.pdb" />
     <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <None Include="Resources\icons8-shop-100 %281%291.png" />
     <None Include="Resources\logout %281%291.png" />
     <None Include="Resources\deneme.txt" />
     <None Include="Resources\products.txt">

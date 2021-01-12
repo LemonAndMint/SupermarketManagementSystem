@@ -23,8 +23,6 @@ C:\Users\ruvey\OneDrive\Masaüstü\SupermarketManagementSystem\SupermarketManage
 C:\Users\ruvey\OneDrive\Masaüstü\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.SubFormStok.resources
 C:\Users\ruvey\OneDrive\Masaüstü\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.SubFormDebt.resources
 C:\Users\ruvey\OneDrive\Masaüstü\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.SubFormPesin.resources
-C:\Users\ruvey\OneDrive\Masaüstü\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.SubFormDebtReport.resources
-C:\Users\ruvey\OneDrive\Masaüstü\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.SubFormKarZarar.resources
 C:\Users\ruvey\OneDrive\Masaüstü\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.SubFormReport.resources
 C:\Users\Administrator\source\repos\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.Login.resources
 C:\Users\Administrator\source\repos\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.MainPage.resources

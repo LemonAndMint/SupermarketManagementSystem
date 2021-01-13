@@ -17,8 +17,7 @@ namespace SupermarketManagementSystem
 		static void Main()
 		{
 			Employee.setEmployee("aa", "123");
-
-
+			
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new Login());

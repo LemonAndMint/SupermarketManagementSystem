@@ -28,7 +28,7 @@ namespace SupermarketManagementSystem.database.sale
 			using (var context = new MngContext())
 			{
 
-				cSaleInfo = context.CashSales.SqlQuery("Select product_no, sale_date, payment_method from CashSales where sale_no=@sale", new SqlParameter("@sale", sale_no)).FirstOrDefault<CashSale>();
+				cSaleInfo = context.CashSales.SqlQuery("Select * from CashSales where sale_no=@sale", new SqlParameter("@sale", sale_no)).FirstOrDefault<CashSale>();
 
 			}
 
@@ -43,7 +43,7 @@ namespace SupermarketManagementSystem.database.sale
 			using (var context = new MngContext())
 			{
 
-				cSaleInfo = context.CashSales.SqlQuery("Select sale_no, product_no, payment_method from CashSales where sale_date=@sldt", new SqlParameter("@sldt", sale_date)).FirstOrDefault<CashSale>();
+				cSaleInfo = context.CashSales.SqlQuery("Select * from CashSales where sale_date=@sldt", new SqlParameter("@sldt", sale_date)).FirstOrDefault<CashSale>();
 
 			}
 
@@ -58,7 +58,7 @@ namespace SupermarketManagementSystem.database.sale
 			using (var context = new MngContext())
 			{
 
-				cSaleInfo = context.CashSales.SqlQuery("Select product_no, sale_date, payment_method from CashSales where sale_no=@sale").ToList();
+				cSaleInfo = context.CashSales.SqlQuery("Select * from CashSales").ToList();
 
 			}
 

@@ -33,7 +33,7 @@ namespace SupermarketManagementSystem.database
 			using (var context = new MngContext())
 			{
 
-				debitInfo = context.DebitSales.SqlQuery("Select sale_no, product_no, sale_date, payment_method from Employees where customer_no=@cno", new SqlParameter("@usr", customer_no)).FirstOrDefault<DebitSale>();
+				debitInfo = context.DebitSales.SqlQuery("Select * from DebitSales where customer_no=@cno", new SqlParameter("@usr", customer_no)).FirstOrDefault<DebitSale>();
 
 			}
 

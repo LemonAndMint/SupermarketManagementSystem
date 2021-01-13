@@ -37,7 +37,6 @@ namespace SupermarketManagementSystem
             Product_Import(sender, e);
             loadDatabaseProduct();
 
-        DebitSale.setDSale(1, 1, 1, DateTime.Now, "nakit", "aa", 1, 1);
 
     }
 

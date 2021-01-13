@@ -17,8 +17,7 @@ namespace SupermarketManagementSystem
             InitializeComponent();
     
         }
-        SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-PCFS9CS\\SQLEXPRESS;Initial Catalog=SchoolDB-ByConnectionString;Integrated Security=true;");
-        DataSet daset = new DataSet();
+      
         DataTable table = new DataTable();
         private void SubFormPesin_Load_1(object sender, EventArgs e)
         {
@@ -34,7 +33,6 @@ namespace SupermarketManagementSystem
         public void loadDatabaseSale()
         {
             List<CashSale> sales = CashSale.getallCSale();
-            float totalDebt = 0;
 
             foreach (CashSale s in sales)
             {
@@ -46,28 +44,14 @@ namespace SupermarketManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //CashSale.setCSale(1, 3, DateTime.Now, "Cash", "aa", 5);
-            //for (int i = 0; i < dataGridView1.Rows.Count; i++)
-            //CashSale.setCSale(1, 3, DateTime.Now, "Cash", "aa",5)
-            //     loadDatabaseSale();
-
-
-            for(int i = 0; i< dataGridView1.Rows.Count - 1; i++)
+             for (int i = 0; i< dataGridView1.Rows.Count -1; i++)
             {
-                baglanti.Open();
-                SqlCommand komut = new SqlCommand("insert into Sales( product_no, sale_date ,payment_method, Discriminator) values ( @product_no, @sale_date ,@payment_method, @Discriminator)", baglanti);
-
-                komut.Parameters.AddWithValue("@product_no", dataGridView1.Rows[i].Cells["Product No"].Value);
-                komut.Parameters.AddWithValue("@sale_date", DateTime.Now);
-                komut.Parameters.AddWithValue("@payment_method", "Ödeme yapıldı");
-                komut.Parameters.AddWithValue("@Discriminator", "??");
-
-                komut.ExecuteNonQuery();
-                baglanti.Close();
+                CashSale.setCSale(i, Convert.ToInt32(dataGridView1.Rows[i].Cells["Product No"].Value), DateTime.Now, "Ödeme Yapıldı", "aa", Convert.ToInt32(dataGridView1.Rows[i].Cells["Barcode No"].Value));
             }
             MessageBox.Show("Kayıtlar eklendi");
             table.Clear();
-
+            //loadDatabaseSale();
+            
         }
 
         public void hesapla()
@@ -75,7 +59,7 @@ namespace SupermarketManagementSystem
             int toplam = 0;
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
-                toplam += Convert.ToInt32(dataGridView1.Rows[i].Cells[2].Value) * Convert.ToInt32(dataGridView1.Rows[i].Cells[3].Value);
+                toplam += Convert.ToInt32(dataGridView1.Rows[i].Cells["Unit Input Price"].Value) * Convert.ToInt32(dataGridView1.Rows[i].Cells["Amount"].Value);
             }
             label5.Text = toplam.ToString();
         }
@@ -102,7 +86,7 @@ namespace SupermarketManagementSystem
                 }
                 catch (Exception EX)
                 {
-                    MessageBox.Show(EX.Message, "FRMARKETOTOMASYONU");
+                    MessageBox.Show(EX.Message, "ERROR");
                 }
 
             }
@@ -114,6 +98,7 @@ namespace SupermarketManagementSystem
             {
                 this.dataGridView1.Rows.RemoveAt(this.rowIndex);
             }
+            hesapla();
         }
 
 

@@ -188,6 +188,11 @@ namespace SupermarketManagementSystem
             label3.Text = DateTime.Now.ToLongTimeString();
             timer1.Start();
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
 

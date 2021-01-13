@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Reflection;
 using SupermarketManagementSystem.database;
+using SupermarketManagementSystem.database.sale;
 
 namespace SupermarketManagementSystem
 {
@@ -19,6 +20,7 @@ namespace SupermarketManagementSystem
         public SubFormcs()
         {
             InitializeComponent();
+            
         }
         DataTable table = new DataTable();
         private void SubFormcs_Load(object sender, EventArgs e)

@@ -128,6 +128,7 @@ namespace SupermarketManagementSystem
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SubFormDebt";
             this.Text = "SubFormDebt";
+            this.Load += new System.EventHandler(this.SubFormDebt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

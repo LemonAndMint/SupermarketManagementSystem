@@ -1,4 +1,5 @@
 ﻿using SupermarketManagementSystem.database;
+using SupermarketManagementSystem.database.sale;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,8 @@ namespace SupermarketManagementSystem
         public SubFormStok()
         {
             InitializeComponent();
+           
+
         }
 
     DataTable table = new DataTable();
@@ -31,7 +34,7 @@ namespace SupermarketManagementSystem
 
     }
 
-    private void loadDatabaseProduct()
+    public  void loadDatabaseProduct()
     {
       List<Product> prdts = Product.getAllProduct();
 
@@ -88,5 +91,10 @@ namespace SupermarketManagementSystem
 		{
 
 		}
-	}
+
+        private void SubFormStok_Load_1(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

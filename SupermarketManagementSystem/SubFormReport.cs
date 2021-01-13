@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SupermarketManagementSystem.database.sale;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,7 @@ namespace SupermarketManagementSystem
     {
         public SubFormReport()
         {
+            
             InitializeComponent();
         }
     }

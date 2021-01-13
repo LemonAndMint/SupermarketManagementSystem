@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SupermarketManagementSystem.database.sale;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace SupermarketManagementSystem
         public SubFormDebt()
         {
             InitializeComponent();
+            CashSale.setCSale(1, 3, DateTime.Now, "Cash", "aa", 5);
+        }
+
+        private void SubFormDebt_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

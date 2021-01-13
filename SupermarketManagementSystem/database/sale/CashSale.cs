@@ -59,7 +59,7 @@ namespace SupermarketManagementSystem.database.sale
 		}
 		public static void setCSale(int sale_no, int product_no,
 																DateTime sale_date, string payment_method,
-																string empusname, int barcode)
+																string empusname,  int barcode)
 		{
 			using (MngContext context = new MngContext())
 			{

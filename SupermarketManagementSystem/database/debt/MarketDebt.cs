@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SupermarketManagementSystem.database.sale;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -55,6 +56,7 @@ namespace SupermarketManagementSystem.database
 
 		public static float totalMDebt()
 		{
+			
 			List<MarketDebt> marketDebts = getMDebtnonPayed();
 
 			float totalDebt = 0;

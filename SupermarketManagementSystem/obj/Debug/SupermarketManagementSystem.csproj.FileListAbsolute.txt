@@ -98,7 +98,6 @@ C:\Users\pc\Desktop\Yeni klasör\SupermarketManagementSystem\SupermarketManageme
 C:\Users\pc\Desktop\Yeni klasör\SupermarketManagementSystem\SupermarketManagementSystem\bin\Debug\SupermarketManagementSystem.exe.config
 C:\Users\pc\Desktop\Yeni klasör\SupermarketManagementSystem\SupermarketManagementSystem\bin\Debug\SupermarketManagementSystem.exe
 C:\Users\pc\Desktop\Yeni klasör\SupermarketManagementSystem\SupermarketManagementSystem\bin\Debug\SupermarketManagementSystem.pdb
-C:\Users\pc\Desktop\Yeni klasör\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.csprojAssemblyReference.cache
 C:\Users\pc\Desktop\Yeni klasör\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.Login.resources
 C:\Users\pc\Desktop\Yeni klasör\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.MainPage.resources
 C:\Users\pc\Desktop\Yeni klasör\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.Properties.Resources.resources
@@ -114,3 +113,4 @@ C:\Users\pc\Desktop\Yeni klasör\SupermarketManagementSystem\SupermarketManageme
 C:\Users\pc\Desktop\Yeni klasör\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.csproj.CopyComplete
 C:\Users\pc\Desktop\Yeni klasör\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.exe
 C:\Users\pc\Desktop\Yeni klasör\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.pdb
+C:\Users\pc\Desktop\Yeni klasör\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.csprojAssemblyReference.cache

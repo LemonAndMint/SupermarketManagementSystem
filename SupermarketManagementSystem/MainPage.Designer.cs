@@ -53,10 +53,10 @@ namespace SupermarketManagementSystem
             this.button6 = new System.Windows.Forms.Button();
             this.panelSubForm = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.sideMenu.SuspendLayout();
             this.panelSubMenuRapor.SuspendLayout();
@@ -403,6 +403,29 @@ namespace SupermarketManagementSystem
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1001, 657);
             this.panel2.TabIndex = 0;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(122)))), ((int)(((byte)(91)))));
+            this.label3.Location = new System.Drawing.Point(578, 376);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 35);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "label3";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(122)))), ((int)(((byte)(91)))));
+            this.label2.Location = new System.Drawing.Point(325, 376);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 35);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "label2";
             // 
             // pictureBox2
             // 
@@ -424,28 +447,6 @@ namespace SupermarketManagementSystem
             this.label1.Size = new System.Drawing.Size(370, 91);
             this.label1.TabIndex = 0;
             this.label1.Text = "WELCOME";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(122)))), ((int)(((byte)(91)))));
-            this.label2.Location = new System.Drawing.Point(325, 376);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 35);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "label2";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(122)))), ((int)(((byte)(91)))));
-            this.label3.Location = new System.Drawing.Point(578, 376);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 35);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "label3";
             // 
             // timer1
             // 

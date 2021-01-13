@@ -13,7 +13,6 @@ namespace SupermarketManagementSystem.database
 		[Key]
 		public int customer_no { get; set; }
 
-		[Required]
 		public virtual DebitSale DebitSale { get; set; }
 
 		public static CustomerDebt getSupplier(int customer_no)
@@ -33,7 +32,7 @@ namespace SupermarketManagementSystem.database
 		}
 
 		public static CustomerDebt setCDebt(int customer_no, int debt_amount,
-																				DateTime debt_date, DebitSale ds)
+																				DateTime debt_date)
 		{
 			if (getSupplier(customer_no) == null) { 
 					using (MngContext context = new MngContext())
@@ -45,7 +44,6 @@ namespace SupermarketManagementSystem.database
 						debt_amount = debt_amount,
 						debt_date = debt_date,
 						payed = false, //ürün stoğa eklendiğinde borç oluşur daima
-						DebitSale = ds,
 					};
 
 					context.CustomerDebts.Add(m);

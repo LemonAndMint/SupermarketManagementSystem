@@ -9,13 +9,19 @@ using System.Threading.Tasks;
 
 namespace SupermarketManagementSystem.database
 {
-	class DebitSale : Sale
+	class DebitSale
 	{
 		[Key]
+		public int sale_no { get; set; }
 		public int customer_no { get; set; }
+		public int barcode { get; set; }
+		public int product_no { get; set; }
+		public DateTime sale_date { get; set; }
+		public string payment_method { get; set; }
 
 		[Required]
 		public virtual Employee Employee { get; set; }
+		[Required]
 		public virtual CustomerDebt CustomerDebt { get; set; }
 		public virtual Product Product { get; set; }
 
@@ -41,17 +47,18 @@ namespace SupermarketManagementSystem.database
 			using (MngContext context = new MngContext())
 			{
 
+				CustomerDebt c = CustomerDebt.setCDebt(customer_no, prize, sale_date);
+
 				DebitSale m = new DebitSale
 				{
 					sale_no = sale_no,
 					product_no = product_no,
 					sale_date = sale_date,
 					payment_method = payment_method,
+					barcode = barcode,
 					Employee = Employee.getEmployeebyUsName(empusname),
-					Product = Product.getProductbyBarcode(barcode),
+					CustomerDebt = c,
 				};
-
-				m.CustomerDebt = CustomerDebt.setCDebt(customer_no, prize, sale_date, m);
 
 				context.DebitSales.Add(m);
 				context.SaveChanges();

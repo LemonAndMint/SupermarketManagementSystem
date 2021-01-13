@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SupermarketManagementSystem.database.sale;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -25,7 +26,8 @@ namespace SupermarketManagementSystem.database
 
 		[Required]
 		public virtual MarketDebt MarketDebt { get; set; }
-		public virtual Sale Sale { get; set; }
+		public virtual ICollection<CashSale> CashSale { get; set; }
+		public virtual ICollection<DebitSale> DebitSale { get; set; }
 		public virtual Supplier Supplier { get; set; }
 
 		public static Product getProductbyBarcode(int barcode)
@@ -115,12 +117,11 @@ namespace SupermarketManagementSystem.database
 						prize = prize,
 						product_name = product_name,
 						Supplier = sup,
-						MarketDebt = MarketDebt.setMDebt(prize, debt_date),
+						MarketDebt = MarketDebt.setMDebt(prize, debt_date, barcode),
 				};
 
 					context.Products.Add(p);
 					context.SaveChanges();
-
 				}
 
 			}

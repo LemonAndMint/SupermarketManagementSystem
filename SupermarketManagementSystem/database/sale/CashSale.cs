@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -8,8 +9,14 @@ using SupermarketManagementSystem.database;
 
 namespace SupermarketManagementSystem.database.sale
 {
-	class CashSale : Sale
+	class CashSale
 	{
+		[Key]
+		public int sale_no { get; set; }
+		public int product_no { get; set; }
+		public int barcode { get; set; }
+		public DateTime sale_date { get; set; }
+		public string payment_method { get; set; }
 		public virtual Employee Employee { get; set; }
 		public virtual Product Product { get; set; }
 
@@ -61,6 +68,9 @@ namespace SupermarketManagementSystem.database.sale
 																DateTime sale_date, string payment_method,
 																string empusname,  int barcode)
 		{
+
+			Employee e = Employee.getEmployeebyUsName(empusname);
+
 			using (MngContext context = new MngContext())
 			{
 
@@ -68,10 +78,10 @@ namespace SupermarketManagementSystem.database.sale
 				{
 					sale_no = sale_no,
 					product_no = product_no,
+					barcode = barcode,
 					sale_date = sale_date,
 					payment_method = payment_method,
-					Employee = Employee.getEmployeebyUsName(empusname),
-					Product = Product.getProductbyBarcode(barcode),
+					Employee = e,
 				};
 
 				context.CashSales.Add(m);

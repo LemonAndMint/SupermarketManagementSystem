@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SupermarketManagementSystem.database.sale;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -18,7 +19,8 @@ namespace SupermarketManagementSystem.database
 		public string username { get; set; }
 		public string password { get; set; }
 
-		public virtual ICollection<Sale> Sales { get; set; }
+		public virtual ICollection<CashSale> CashSale { get; set; }
+		public virtual ICollection<DebitSale> DebithSale { get; set; }
 
 		public static Employee getEmployee(string dusername, string dpassword) {
 

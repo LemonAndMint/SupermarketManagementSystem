@@ -13,6 +13,7 @@ namespace SupermarketManagementSystem.database
 	{
 		[Key]
 		public int m_debt_no { get; set; }
+		public int barcode { get; set; }
 		
 		public virtual Product Product { get; set; }
 
@@ -33,7 +34,8 @@ namespace SupermarketManagementSystem.database
 		}
 
 		public static MarketDebt setMDebt(float debt_amount,
-																			DateTime debt_date)
+																			DateTime debt_date,
+																			int barcode)
 		{
 			using (MngContext context = new MngContext())
 			{
@@ -42,6 +44,7 @@ namespace SupermarketManagementSystem.database
 				{
 					debt_amount = debt_amount,
 					debt_date = debt_date,
+					barcode = barcode,
 					payed = false, //ürün stoğa eklendiğinde borç oluşur daima
 				};
 

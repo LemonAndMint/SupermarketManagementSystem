@@ -167,7 +167,6 @@
     <Compile Include="database\Product.cs" />
     <Compile Include="database\sale\CashSale.cs" />
     <Compile Include="database\sale\DebitSale.cs" />
-    <Compile Include="database\sale\Sale.cs" />
     <Compile Include="database\Supplier.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>

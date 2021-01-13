@@ -23,7 +23,6 @@ namespace SupermarketManagementSystem.database
 		public virtual Employee Employee { get; set; }
 		[Required]
 		public virtual CustomerDebt CustomerDebt { get; set; }
-		public virtual Product Product { get; set; }
 
 		public static DebitSale getDebitSale(int customer_no)
 		{
@@ -39,6 +38,20 @@ namespace SupermarketManagementSystem.database
 
 			return debitInfo;
 		}
+		public static List<DebitSale> getallDSale()
+		{
+
+			List<DebitSale> dSaleInfo;
+
+			using (var context = new MngContext())
+			{
+
+				dSaleInfo = context.DebitSales.SqlQuery("Select * from DebitSales").ToList();
+
+			}
+
+			return dSaleInfo;
+		}
 
 		public static void setDSale(int customer_no, int sale_no, int product_no,
 																DateTime sale_date, string payment_method,
@@ -47,16 +60,18 @@ namespace SupermarketManagementSystem.database
 			using (MngContext context = new MngContext())
 			{
 
-				CustomerDebt c = CustomerDebt.setCDebt(customer_no, prize, sale_date);
+				CustomerDebt c = CustomerDebt.setCDebt(customer_no, prize, sale_date, sale_no);
+				Employee e = Employee.getEmployeebyUsName(empusname);
 
 				DebitSale m = new DebitSale
 				{
+					customer_no = customer_no,
 					sale_no = sale_no,
 					product_no = product_no,
 					sale_date = sale_date,
 					payment_method = payment_method,
 					barcode = barcode,
-					Employee = Employee.getEmployeebyUsName(empusname),
+					Employee = e,
 					CustomerDebt = c,
 				};
 

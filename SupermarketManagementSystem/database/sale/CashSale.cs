@@ -18,7 +18,6 @@ namespace SupermarketManagementSystem.database.sale
 		public DateTime sale_date { get; set; }
 		public string payment_method { get; set; }
 		public virtual Employee Employee { get; set; }
-		public virtual Product Product { get; set; }
 
 		public static CashSale getCSalebyNo(string sale_no)
 		{
@@ -82,7 +81,7 @@ namespace SupermarketManagementSystem.database.sale
 					sale_date = sale_date,
 					payment_method = payment_method,
 					Employee = e,
-				};
+			};
 
 				context.CashSales.Add(m);
 				context.SaveChanges();

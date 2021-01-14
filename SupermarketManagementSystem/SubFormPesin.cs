@@ -24,7 +24,7 @@ namespace SupermarketManagementSystem
             table.Columns.Add("Product Name", typeof(string));
             table.Columns.Add("Barcode No", typeof(int));
             table.Columns.Add("Product No", typeof(int));
-            table.Columns.Add("Unit Input Price", typeof(int));
+            table.Columns.Add("Sale Price", typeof(float));
             table.Columns.Add("Amount", typeof(int));
 
 
@@ -57,10 +57,10 @@ namespace SupermarketManagementSystem
 
         public void hesapla()
         {
-            int toplam = 0;
+            float toplam = 0;
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
-                toplam += Convert.ToInt32(dataGridView1.Rows[i].Cells["Unit Input Price"].Value) * Convert.ToInt32(dataGridView1.Rows[i].Cells["Amount"].Value);
+                toplam += Convert.ToSingle(dataGridView1.Rows[i].Cells["Sale Price"].Value);
             }
             label5.Text = (toplam.ToString() + "₺" );
         }
@@ -79,7 +79,7 @@ namespace SupermarketManagementSystem
                     }
                     else
                     {
-                        table.Rows.Add(product.product_name, barcode, product.product_no, product.unit_input_price, product.amount);
+                        table.Rows.Add(product.product_name, barcode, product.product_no, product.prize, 1);
                         dataGridView1.DataSource = table;
                         urun_barkod1.Text = "";
                         hesapla();

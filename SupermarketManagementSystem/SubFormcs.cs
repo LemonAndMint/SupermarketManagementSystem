@@ -37,14 +37,14 @@ namespace SupermarketManagementSystem
             Product_Import(sender, e);
             loadDatabaseProduct();
 
-        CashSale.setCSale(1,11,DateTime.Now,"nakit","aa",1);
-        CashSale.setCSale(1,11,DateTime.Now, "nakit", "aa", 1);
-        CashSale.getallCSale();
+        //CashSale.setCSale(1,11,DateTime.Now,"nakit","aa",1);
+        //CashSale.setCSale(1,11,DateTime.Now, "nakit", "aa", 1);
+        //CashSale.getallCSale();
 
-        DebitSale.setDSale(1, 1 ,11, DateTime.Now, "nakit", "aa", 1, 1);
-        DebitSale.setDSale(2, 2, 12, DateTime.Now, "nakit", "aa", 2, 1);
-        DebitSale.setDSale(2, 3, 12, DateTime.Now, "nakit", "aa", 2, 1);
-        DebitSale.getallDSale();
+        //DebitSale.setDSale(1, 1 ,11, DateTime.Now, "nakit", "aa", 1, 1);
+        //DebitSale.setDSale(2, 2, 12, DateTime.Now, "nakit", "aa", 2, 1);
+        //DebitSale.setDSale(2, 3, 12, DateTime.Now, "nakit", "aa", 2, 1);
+        //DebitSale.getallDSale();
 
     }
 
@@ -77,10 +77,10 @@ namespace SupermarketManagementSystem
 
 		private void button2_Click(object sender, EventArgs e)
 		{
-      Product.delProductByBarcode(int.Parse(barcode));
-      removeDatabase();
-      loadDatabaseProduct();
-    }
+             Product.delProductByBarcode(int.Parse(barcode));
+             removeDatabase();
+             loadDatabaseProduct();
+        }
 
 		private void button3_Click(object sender, EventArgs e)
 		{

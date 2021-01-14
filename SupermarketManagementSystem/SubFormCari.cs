@@ -15,15 +15,16 @@ namespace SupermarketManagementSystem
     public partial class SubFormCari : Form
     {
         private int rowIndex = 0;
+        //public int 
         public SubFormCari()
         {
             InitializeComponent();
-          
         }
         DataTable table = new DataTable();
 
         private void SubFormCari_Load(object sender, EventArgs e)
         {
+           
             table.Columns.Add("Product Name", typeof(string));
             table.Columns.Add("Barcode No", typeof(int));
             table.Columns.Add("Product No", typeof(int));
@@ -39,7 +40,7 @@ namespace SupermarketManagementSystem
             {
                 toplam += Convert.ToInt32(dataGridView1.Rows[i].Cells["Unit Input Price"].Value) * Convert.ToInt32(dataGridView1.Rows[i].Cells["Amount"].Value);
             }
-            label5.Text = toplam.ToString();
+            label5.Text =( toplam.ToString() + "₺" );
         }
         private void urun_barkod1_TextChanged_1(object sender, KeyEventArgs e)
         {
@@ -59,7 +60,7 @@ namespace SupermarketManagementSystem
                         table.Rows.Add(product.product_name, barcode, product.product_no, product.unit_input_price, product.amount);
                         dataGridView1.DataSource = table;
                         urun_barkod1.Text = "";
-                   //     hesapla();
+                        hesapla();
                     }
                 }
                 catch (Exception EX)
@@ -69,30 +70,46 @@ namespace SupermarketManagementSystem
 
             }
         }
-
-        private void urun_barkod1_TextChanged(object sender, EventArgs e)
+        public void DebtSoldProducts()
         {
+            List<DebitSale> debtSoldProducts = DebitSale.getallDSale();
 
+            if(debtSoldProducts != null)
+            {
+                foreach (DebitSale s in debtSoldProducts)
+                {
+                    Object[] SoldProducts_debt = { s.customer_no, s.sale_no, s.product_no, s.sale_date, s.payment_method, s.CustomerDebt };
+                }
+            }
+           
         }
+
+        public void CustomerShoppingCounter()
+        {
+           
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
+            int DebtSaleNo = 1;
 
             for(int i = 0; i< dataGridView1.Rows.Count -1; i++)
             {
-                DebitSale.setDSale(Convert.ToInt32(addCustomer.Text), i, Convert.ToInt32(dataGridView1.Rows[i].Cells["Product No"].Value), DateTime.Now, "cari", "aa", Convert.ToInt32(dataGridView1.Rows[i].Cells["Barcode No"].Value), Convert.ToInt32(dataGridView1.Rows[i].Cells["Unit Input Price"].Value) * Convert.ToInt32(dataGridView1.Rows[i].Cells["Amount"].Value));
-
+                DebitSale.setDSale(Convert.ToInt32(addCustomer.Text), i, Convert.ToInt32(dataGridView1.Rows[i].Cells["Product No"].Value), DateTime.Now, "Cari", "aa", Convert.ToInt32(dataGridView1.Rows[i].Cells["Barcode No"].Value), Convert.ToInt32(dataGridView1.Rows[i].Cells["Unit Input Price"].Value) * Convert.ToInt32(dataGridView1.Rows[i].Cells["Amount"].Value));
+                //CustomerDebt.setCDebt(Convert.ToInt32(addCustomer.Text), Convert.ToInt32(dataGridView1.Rows[i].Cells["Unit Input Price"].Value) * Convert.ToInt32(dataGridView1.Rows[i].Cells["Amount"].Value), DateTime.Now, i);
             }
-            MessageBox.Show("Kayıtlar eklendi");
+            //CustomerDebt.setCDebt(Convert.ToInt32(addCustomer.Text), Convert.ToInt32(label5.Text), DateTime.Now, DebitSale.getDebitSale(Convert.ToInt32( addCustomer.Text)).sale_no );
+            MessageBox.Show("THE SALE WAS MADE ");
+            DebtSaleNo++;
+            label5.Text = "0 ₺";
+            addCustomer.Text = "";
             table.Clear();
+           
+            
         }
 
-        private void addCustomer_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        
         private void dataGridView1_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
@@ -104,17 +121,31 @@ namespace SupermarketManagementSystem
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void deleteProductToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (!this.dataGridView1.Rows[this.rowIndex].IsNewRow)
             {
                 this.dataGridView1.Rows.RemoveAt(this.rowIndex);
             }
+            hesapla();
+        }
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void addCustomer_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void urun_barkod1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

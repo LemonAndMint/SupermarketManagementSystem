@@ -30,7 +30,7 @@ namespace SupermarketManagementSystem
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.searchBox = new System.Windows.Forms.TextBox();
+            this.searchCustomer = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -51,18 +51,20 @@ namespace SupermarketManagementSystem
             this.label1.TabIndex = 0;
             this.label1.Text = "DEBTS";
             // 
-            // searchBox
+            // searchCustomer
             // 
-            this.searchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.searchCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(205)))), ((int)(((byte)(147)))));
-            this.searchBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.searchBox.Font = new System.Drawing.Font("Segoe UI Semibold", 13.7F, System.Drawing.FontStyle.Bold);
-            this.searchBox.Location = new System.Drawing.Point(331, 123);
-            this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(275, 31);
-            this.searchBox.TabIndex = 1;
+            this.searchCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(205)))), ((int)(((byte)(147)))));
+            this.searchCustomer.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.searchCustomer.Font = new System.Drawing.Font("Segoe UI Semibold", 13.7F, System.Drawing.FontStyle.Bold);
+            this.searchCustomer.Location = new System.Drawing.Point(331, 123);
+            this.searchCustomer.Name = "searchCustomer";
+            this.searchCustomer.Size = new System.Drawing.Size(275, 31);
+            this.searchCustomer.TabIndex = 1;
+            this.searchCustomer.TextChanged += new System.EventHandler(this.searchCustomer_TextChanged);
+            this.searchCustomer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchCustomer_TextChanged_1);
             // 
             // dataGridView1
             // 
@@ -78,6 +80,7 @@ namespace SupermarketManagementSystem
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(415, 221);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label2
             // 
@@ -123,7 +126,7 @@ namespace SupermarketManagementSystem
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.searchBox);
+            this.Controls.Add(this.searchCustomer);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SubFormDebt";
@@ -139,7 +142,7 @@ namespace SupermarketManagementSystem
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox searchBox;
+        private System.Windows.Forms.TextBox searchCustomer;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;

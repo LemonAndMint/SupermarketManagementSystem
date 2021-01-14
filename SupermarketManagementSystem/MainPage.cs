@@ -73,7 +73,7 @@ namespace SupermarketManagementSystem
 
         private void button3_Click(object sender, EventArgs e)
         {
-            OpenSubForm(new SubFormCari());
+            OpenSubForm(new SubFormCari()); 
             panel2.Visible = false;
 
         }

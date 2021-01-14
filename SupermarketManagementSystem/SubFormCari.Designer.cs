@@ -125,9 +125,10 @@ namespace SupermarketManagementSystem
             this.label5.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.Location = new System.Drawing.Point(770, 538);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 32);
+            this.label5.Size = new System.Drawing.Size(50, 32);
             this.label5.TabIndex = 11;
-            this.label5.Text = "Fiyat";
+            this.label5.Text = "0 ₺";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -163,12 +164,12 @@ namespace SupermarketManagementSystem
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.deleteProductToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 56);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(178, 28);
             // 
             // deleteProductToolStripMenuItem
             // 
             this.deleteProductToolStripMenuItem.Name = "deleteProductToolStripMenuItem";
-            this.deleteProductToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.deleteProductToolStripMenuItem.Size = new System.Drawing.Size(177, 24);
             this.deleteProductToolStripMenuItem.Text = "Delete Product";
             this.deleteProductToolStripMenuItem.Click += new System.EventHandler(this.deleteProductToolStripMenuItem_Click);
             // 

@@ -30,13 +30,13 @@ namespace SupermarketManagementSystem
 
             dataGridView1.DataSource = table;
         }
-        public void loadDatabaseSale()
+        public void CashSoldProducts()
         {
-            List<CashSale> sales = CashSale.getallCSale();
+            List<CashSale> cashSoldProducts = CashSale.getallCSale();
 
-            foreach (CashSale s in sales)
+            foreach (CashSale s in cashSoldProducts)
             {
-                int[] cashSaleProducts = { s.sale_no, s.product_no, Convert.ToInt32(s.sale_date) };
+                Object[] SoldProducts_cash = { s.sale_no, s.product_no, s.sale_date };
             }
 
         }
@@ -48,9 +48,10 @@ namespace SupermarketManagementSystem
             {
                 CashSale.setCSale(i, Convert.ToInt32(dataGridView1.Rows[i].Cells["Product No"].Value), DateTime.Now, "Ödeme Yapıldı", "aa", Convert.ToInt32(dataGridView1.Rows[i].Cells["Barcode No"].Value));
             }
-            MessageBox.Show("Kayıtlar eklendi");
+            MessageBox.Show("THE SALE WAS MADE ");
+            label5.Text = "0 ₺";
             table.Clear();
-            //loadDatabaseSale();
+            CashSoldProducts();
             
         }
 
@@ -61,7 +62,7 @@ namespace SupermarketManagementSystem
             {
                 toplam += Convert.ToInt32(dataGridView1.Rows[i].Cells["Unit Input Price"].Value) * Convert.ToInt32(dataGridView1.Rows[i].Cells["Amount"].Value);
             }
-            label5.Text = toplam.ToString();
+            label5.Text = (toplam.ToString() + "₺" );
         }
         private void urun_barkod1_TextChanged_1(object sender, KeyEventArgs e)
         {

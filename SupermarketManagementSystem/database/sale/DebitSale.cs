@@ -70,9 +70,10 @@ namespace SupermarketManagementSystem.database
 					product_no = product_no,
 					sale_date = sale_date,
 					payment_method = payment_method,
-					barcode = barcode,
 					Employee = e,
+					barcode = barcode,
 					CustomerDebt = c,
+					
 				};
 
 				context.DebitSales.Add(m);

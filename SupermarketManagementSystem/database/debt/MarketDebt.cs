@@ -9,10 +9,13 @@ using System.Threading.Tasks;
 
 namespace SupermarketManagementSystem.database
 {
-	class MarketDebt : Debt
+	class MarketDebt
 	{
 		[Key]
 		public int m_debt_no { get; set; }
+		public float debt_amount { get; set; }
+		public bool payed { get; set; } //borç ödendiyse true olacak 
+		public DateTime debt_date { get; set; }
 		public int barcode { get; set; }
 		
 		public virtual Product Product { get; set; }

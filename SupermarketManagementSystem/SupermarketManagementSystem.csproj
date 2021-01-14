@@ -160,7 +160,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="database\debt\CustomerDebt.cs" />
-    <Compile Include="database\debt\Debt.cs" />
     <Compile Include="database\debt\MarketDebt.cs" />
     <Compile Include="database\Employee.cs" />
     <Compile Include="database\MngContext.cs" />

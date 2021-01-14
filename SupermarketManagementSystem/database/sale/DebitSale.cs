@@ -55,12 +55,11 @@ namespace SupermarketManagementSystem.database
 
 		public static void setDSale(int customer_no, int sale_no, int product_no,
 																DateTime sale_date, string payment_method,
-																string empusname, int barcode, int prize)
+																string empusname, int barcode, float prize)
 		{
 			using (MngContext context = new MngContext())
 			{
 
-				CustomerDebt c = CustomerDebt.setCDebt(customer_no, prize, sale_date, sale_no);
 				Employee e = Employee.getEmployeebyUsName(empusname);
 
 				DebitSale m = new DebitSale
@@ -72,8 +71,8 @@ namespace SupermarketManagementSystem.database
 					payment_method = payment_method,
 					barcode = barcode,
 					Employee = e,
-					CustomerDebt = c,
 				};
+				m.CustomerDebt = CustomerDebt.setCDebt(customer_no, prize, sale_date, sale_no);
 
 				context.DebitSales.Add(m);
 				context.SaveChanges();

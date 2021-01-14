@@ -8,9 +8,13 @@ using System.Threading.Tasks;
 
 namespace SupermarketManagementSystem.database
 {
-	class CustomerDebt : Debt
+	class CustomerDebt
 	{
 		[Key]
+		public int debt_no { get; set; }
+		public float debt_amount { get; set; }
+		public bool payed { get; set; } //borç ödendiyse true olacak 
+		public DateTime debt_date { get; set; }
 		public int sale_no { get; set; }
 		public int customer_no { get; set; }
 
@@ -32,8 +36,8 @@ namespace SupermarketManagementSystem.database
 
 		}
 
-		public static CustomerDebt setCDebt(int customer_no, int debt_amount,
-																				DateTime debt_date, int sale_no)
+		public static CustomerDebt setCDebt(int customer_no, float debt_amount,
+																DateTime debt_date, int sale_no)
 		{
 				using (MngContext context = new MngContext())
 			{

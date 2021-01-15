@@ -72,6 +72,7 @@ namespace SupermarketManagementSystem
             this.urunbazli.Series.Add(series2);
             this.urunbazli.Size = new System.Drawing.Size(477, 335);
             this.urunbazli.TabIndex = 7;
+            this.urunbazli.Click += new System.EventHandler(this.urunbazli_Click);
             // 
             // label2
             // 

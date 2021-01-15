@@ -83,6 +83,7 @@ namespace SupermarketManagementSystem
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SubFormReport";
             this.Text = "SubFormReport";
+            this.Load += new System.EventHandler(this.SubFormReport_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

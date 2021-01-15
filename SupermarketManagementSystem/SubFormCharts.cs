@@ -20,9 +20,6 @@ namespace SupermarketManagementSystem
 
         public void KarHesaplama() // bu metot grafiklerin metotu. ürünler database'e eklendiğinde kontrol edilecek......
         {
-
-
-
             float kar = 0;
             float zarar = 0;
 
@@ -45,11 +42,6 @@ namespace SupermarketManagementSystem
             }
             urunbazli.Titles.Add("Ürün Bazlı Grafik");
 
-
-        }
-
-        private void urunbazli_Click(object sender, EventArgs e)
-        {
 
         }
     }

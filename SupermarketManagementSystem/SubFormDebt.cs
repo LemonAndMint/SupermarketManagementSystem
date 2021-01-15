@@ -43,32 +43,53 @@ namespace SupermarketManagementSystem
                     object[] row = { (p.customer_no), (p.product_no), p.prize, (p.sale_date).ToString()};
                     // s.customer_no, s.product_no, s.CustomerDebt.debt_amount , s.sale_date, s.sale_no, s.payment_method
                     table.Rows.Add(row);
-                    hesapla();
                 }
-            }/*
-            List<DebitSale> debtSoldProducts = DebitSale.getallDSale();
-
-            if (debtSoldProducts != null)
-            {
-                foreach (DebitSale s in debtSoldProducts)
-                {
-                    Object[] SoldProducts_debt = { s.customer_no, s.product_no, s.CustomerDebt.debt_amount, s.sale_date, s.sale_no, s.payment_method, };
-                    table.Rows.Add(SoldProducts_debt);
-                }
-            }*/
+            }
 
         }
-        public void hesapla()
+        public void loadDatabaseCustomerDebts()
         {
-            float toplam = 0;
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
-            {
-                toplam += Convert.ToSingle(dataGridView1.Rows[i].Cells["Sale Price"].Value);
-            }
-            label5.Text = (toplam.ToString() + "₺");
+            
+
         }
         private void searchCustomer_TextChanged_1(object sender, KeyEventArgs e)
         {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                try
+                {
+                    int customer = Convert.ToInt32(searchCustomer.Text);
+                    CustomerDebt customerDebt = CustomerDebt.getCDebt(customer);
+                    DebitSale debitSale = DebitSale.getDebitSale(customer);
+
+
+                    if (customer == null)
+                    {
+                        MessageBox.Show("The debt information of the customer entered was not found!", "ERROR");
+                    }
+                    else
+                    {
+                        List<DebitSale> debtSoldProducts = DebitSale.getallDSale();
+
+                        if (debtSoldProducts != null)
+                        {
+                            foreach (DebitSale s in debtSoldProducts)
+                            {
+                                Object[] SoldProducts_debt = { s.customer_no, s.product_no, s.CustomerDebt.debt_amount, s.sale_date, s.sale_no, s.payment_method, };
+                                table.Rows.Add(SoldProducts_debt);
+                            }
+                        }
+                    }
+                }
+                catch (Exception EX)
+                {
+                    MessageBox.Show(EX.Message, "ERROR");
+                }
+
+            }
+
+
 
         }
 
@@ -82,7 +103,6 @@ namespace SupermarketManagementSystem
         private void searchCustomer_TextChanged(object sender, EventArgs e)
         {
             string aranan = searchCustomer.Text.Trim().ToUpper();
-
             for (int i = 0; i <= dataGridView1.Rows.Count - 1; i++)
             {
                 foreach (DataGridViewRow row in dataGridView1.Rows)
@@ -94,21 +114,9 @@ namespace SupermarketManagementSystem
                             if (cell.Value.ToString().ToUpper() == aranan)
                             {
                                 cell.Style.BackColor = Color.FromArgb(180, 205, 147);
-                                for(int j = 0; j< dataGridView1.Rows.Count -1; j++)
-                                {
-                                    if(cell.Style.BackColor != Color.FromArgb(180, 205, 147))
-                                    {
-                                        dataGridView1.Rows.RemoveAt(j);
-                                    }
-                                }
-
-                                if (cell.Style.BackColor == Color.White)
+                                if(cell.Style.BackColor == Color.White)
                                 {
                                     dataGridView1.Rows[i].Visible = false;
-                                    dataGridView1.Rows.RemoveAt(i);
-
-                                    hesapla();
-
                                 }
                                 break;
                             }
@@ -118,16 +126,6 @@ namespace SupermarketManagementSystem
                     }
                 }
             }
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

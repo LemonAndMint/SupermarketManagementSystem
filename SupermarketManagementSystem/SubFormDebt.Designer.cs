@@ -87,7 +87,7 @@ namespace SupermarketManagementSystem
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(539, 526);
+            this.label2.Location = new System.Drawing.Point(590, 545);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 28);
             this.label2.TabIndex = 4;
@@ -110,12 +110,11 @@ namespace SupermarketManagementSystem
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(688, 522);
+            this.label5.Location = new System.Drawing.Point(730, 541);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 32);
             this.label5.TabIndex = 11;
             this.label5.Text = "Borç";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // SubFormDebt
             // 

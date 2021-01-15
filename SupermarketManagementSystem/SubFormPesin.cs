@@ -79,7 +79,7 @@ namespace SupermarketManagementSystem
                     }
                     else
                     {
-                        table.Rows.Add(product.product_name, barcode, product.product_no, product.price, 1);
+                        table.Rows.Add(product.product_name, barcode, product.product_no, product.prize, 1);
                         dataGridView1.DataSource = table;
                         urun_barkod1.Text = "";
                         hesapla();

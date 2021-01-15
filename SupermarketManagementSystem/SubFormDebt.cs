@@ -40,7 +40,7 @@ namespace SupermarketManagementSystem
             {
                 foreach (DebitSale p in debtSoldProducts)
                 {
-                    object[] row = { (p.customer_no), (p.product_no), p.prize, (p.sale_date).ToString()};
+                    object[] row = { (p.customer_no), (p.product_no), p.price, (p.sale_date).ToString()};
                     // s.customer_no, s.product_no, s.CustomerDebt.debt_amount , s.sale_date, s.sale_no, s.payment_method
                     table.Rows.Add(row);
                     hesapla();

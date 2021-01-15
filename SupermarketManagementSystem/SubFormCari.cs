@@ -24,12 +24,16 @@ namespace SupermarketManagementSystem
 
         private void SubFormCari_Load(object sender, EventArgs e)
         {
-           
-            table.Columns.Add("Product Name", typeof(string));
+            table.Columns.Add("Product No", typeof(int));     
             table.Columns.Add("Barcode No", typeof(int));
-            table.Columns.Add("Product No", typeof(int));
-            table.Columns.Add("Sale Price", typeof(float));
+            table.Columns.Add("Product Name", typeof(string));
             table.Columns.Add("Amount", typeof(int));
+            table.Columns.Add("Unit Input Price", typeof(float));
+            table.Columns.Add("Sale Price", typeof(float));
+            
+
+
+
 
             dataGridView1.DataSource = table;
         }
@@ -57,7 +61,7 @@ namespace SupermarketManagementSystem
                     }
                     else
                     {
-                        table.Rows.Add(product.product_name, barcode, product.product_no, product.prize, 1);
+                        table.Rows.Add(product.product_no, barcode, product.product_name, 1, product.unit_input_price ,product.price);
                         dataGridView1.DataSource = table;
                         urun_barkod1.Text = "";
                         hesapla();
@@ -70,19 +74,7 @@ namespace SupermarketManagementSystem
 
             }
         }
-        public void DebtSoldProducts()
-        {
-            List<DebitSale> debtSoldProducts = DebitSale.getallDSale();
-
-            if(debtSoldProducts != null)
-            {
-                foreach (DebitSale s in debtSoldProducts)
-                {
-                    object[] SoldProducts_debt = { s.customer_no, s.sale_no, s.product_no, s.sale_date, s.payment_method, s.CustomerDebt };
-                }
-            }
-           
-        }
+     
 
         public void CustomerShoppingCounter()
         {
@@ -96,7 +88,7 @@ namespace SupermarketManagementSystem
 
             for(int i = 0; i< dataGridView1.Rows.Count -1; i++)
             {
-                DebitSale.setDSale(Convert.ToInt32(addCustomer.Text), i, Convert.ToInt32(dataGridView1.Rows[i].Cells["Product No"].Value), DateTime.Now, "Cari", "aa", Convert.ToInt32(dataGridView1.Rows[i].Cells["Barcode No"].Value), Convert.ToSingle(dataGridView1.Rows[i].Cells["Sale Price"].Value) * Convert.ToInt32(dataGridView1.Rows[i].Cells["Amount"].Value));
+                DebitSale.setDSale(Convert.ToInt32(addCustomer.Text), i, Convert.ToInt32(dataGridView1.Rows[i].Cells["Product No"].Value), Convert.ToSingle(dataGridView1.Rows[i].Cells["Unit Input Price"].Value), DateTime.Now, "Cari", "aa", Convert.ToInt32(dataGridView1.Rows[i].Cells["Barcode No"].Value), Convert.ToSingle(dataGridView1.Rows[i].Cells["Sale Price"].Value));
                 //CustomerDebt.setCDebt(Convert.ToInt32(addCustomer.Text), Convert.ToInt32(dataGridView1.Rows[i].Cells["Unit Input Price"].Value) * Convert.ToInt32(dataGridView1.Rows[i].Cells["Amount"].Value), DateTime.Now, i);
             }
             //CustomerDebt.setCDebt(Convert.ToInt32(addCustomer.Text), Convert.ToInt32(label5.Text), DateTime.Now, DebitSale.getDebitSale(Convert.ToInt32( addCustomer.Text)).sale_no );

@@ -20,7 +20,7 @@ namespace SupermarketManagementSystem.database
 		public int supplier_no { get; set; }
 		public int product_no { get; set; }
 		public float unit_input_price { get; set; }
-		public float prize { get; set; }
+		public float price { get; set; }
 		public int amount { get; set; }
 		public string product_name { get; set; }
 
@@ -94,7 +94,7 @@ namespace SupermarketManagementSystem.database
 		public static void setProduct(int waybill_no, int barcode, 
 																	int supplier_no, int product_no, 
 																	float unit_input_price, int amount,
-																	float prize, DateTime debt_date,
+																	float price, DateTime debt_date,
 																	string product_name)
 		{
 
@@ -114,10 +114,10 @@ namespace SupermarketManagementSystem.database
 						product_no = product_no,
 						unit_input_price = unit_input_price,
 						amount = amount,
-						prize = prize,
+						price = price,
 						product_name = product_name,
 						Supplier = sup,
-						MarketDebt = MarketDebt.setMDebt(prize, debt_date, barcode),
+						MarketDebt = MarketDebt.setMDebt(price, debt_date, barcode),
 				};
 
 					context.Products.Add(p);

@@ -109,7 +109,15 @@ namespace SupermarketManagementSystem
 
         private void label2_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
 
+=======
+          string[] row = {(p.product_no).ToString(), (p.barcode).ToString(),
+                                      p.product_name, (p.amount).ToString(),
+                                      (p.unit_input_price).ToString(), (p.waybill_no).ToString(),
+                                      (p.price).ToString()};
+          table.Rows.Add(row);
+>>>>>>> 38a83eb38d4889f1c79cfa3076eaedfd01407528
         }
 
         private void button2_Click(object sender, EventArgs e)

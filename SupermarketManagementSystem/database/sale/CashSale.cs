@@ -15,6 +15,8 @@ namespace SupermarketManagementSystem.database.sale
 		public int sale_no { get; set; }
 		public int product_no { get; set; }
 		public int barcode { get; set; }
+		public float price { get; set; }
+		public float unit_input_price { get; set; }
 		public DateTime sale_date { get; set; }
 		public string payment_method { get; set; }
 		public virtual Employee Employee { get; set; }
@@ -69,6 +71,7 @@ namespace SupermarketManagementSystem.database.sale
 		{
 
 			Employee e = Employee.getEmployeebyUsName(empusname);
+			Product p = Product.getProductbyBarcode(barcode);
 
 			using (MngContext context = new MngContext())
 			{
@@ -80,6 +83,8 @@ namespace SupermarketManagementSystem.database.sale
 					barcode = barcode,
 					sale_date = sale_date,
 					payment_method = payment_method,
+					price = p.price,
+					unit_input_price = p.unit_input_price,
 					Employee = e,
 			};
 

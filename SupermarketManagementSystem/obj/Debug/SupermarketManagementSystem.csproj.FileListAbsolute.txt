@@ -29,8 +29,6 @@ C:\Users\Administrator\source\repos\SupermarketManagementSystem\SupermarketManag
 C:\Users\Administrator\source\repos\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.SubFormCari.resources
 C:\Users\Administrator\source\repos\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.SubFormcs.resources
 C:\Users\Administrator\source\repos\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.SubFormDebt.resources
-C:\Users\Administrator\source\repos\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.SubFormDebtReport.resources
-C:\Users\Administrator\source\repos\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.SubFormKarZarar.resources
 C:\Users\Administrator\source\repos\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.SubFormPesin.resources
 C:\Users\Administrator\source\repos\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.SubFormReport.resources
 C:\Users\Administrator\source\repos\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.SubFormStok.resources
@@ -79,3 +77,4 @@ C:\Users\pc\Desktop\Yeni klasör\SupermarketManagementSystem\SupermarketManageme
 C:\Users\pc\Desktop\Yeni klasör\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.exe
 C:\Users\pc\Desktop\Yeni klasör\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.pdb
 C:\Users\pc\Desktop\Yeni klasör\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\SupermarketManagementSystem\SupermarketManagementSystem\obj\Debug\SupermarketManagementSystem.csprojAssemblyReference.cache

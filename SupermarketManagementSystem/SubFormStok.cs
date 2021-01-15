@@ -45,7 +45,7 @@ namespace SupermarketManagementSystem
           string[] row = {(p.product_no).ToString(), (p.barcode).ToString(),
                                       p.product_name, (p.amount).ToString(),
                                       (p.unit_input_price).ToString(), (p.waybill_no).ToString(),
-                                      (p.prize).ToString()};
+                                      (p.price).ToString()};
           table.Rows.Add(row);
         }
       }

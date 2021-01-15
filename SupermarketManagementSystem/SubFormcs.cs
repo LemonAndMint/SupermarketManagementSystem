@@ -37,15 +37,6 @@ namespace SupermarketManagementSystem
             Product_Import(sender, e);
             loadDatabaseProduct();
 
-        //CashSale.setCSale(1,11,DateTime.Now,"nakit","aa",1);
-        //CashSale.setCSale(1,11,DateTime.Now, "nakit", "aa", 1);
-        //CashSale.getallCSale();
-
-        //DebitSale.setDSale(1, 1 ,11, DateTime.Now, "nakit", "aa", 1, 1);
-        //DebitSale.setDSale(2, 2, 12, DateTime.Now, "nakit", "aa", 2, 1);
-        //DebitSale.setDSale(2, 3, 12, DateTime.Now, "nakit", "aa", 2, 1);
-        //DebitSale.getallDSale();
-
     }
 
         private void Product_Import(object sender, EventArgs e)

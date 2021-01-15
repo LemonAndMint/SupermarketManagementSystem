@@ -16,6 +16,7 @@ namespace SupermarketManagementSystem.database
 		public int customer_no { get; set; }
 		public int barcode { get; set; }
 		public float prize { get; set; }
+		public float unit_input_price { get; set; }
 		public int product_no { get; set; }
 		public DateTime sale_date { get; set; }
 		public string payment_method { get; set; }
@@ -33,7 +34,7 @@ namespace SupermarketManagementSystem.database
 			using (var context = new MngContext())
 			{
 
-				debitInfo = context.DebitSales.SqlQuery("Select * from DebitSales where customer_no=@cno", new SqlParameter("@usr", customer_no)).FirstOrDefault<DebitSale>();
+				debitInfo = context.DebitSales.SqlQuery("Select * from DebitSales where customer_no=@cno", new SqlParameter("@cno", customer_no)).FirstOrDefault<DebitSale>();
 
 			}
 
@@ -54,7 +55,14 @@ namespace SupermarketManagementSystem.database
 			return dSaleInfo;
 		}
 
-		public static void setDSale(int customer_no, int sale_no, int product_no,
+		public void DebtSoldProducts()
+		{
+
+
+		}
+
+
+		public static void setDSale(int customer_no, int sale_no, int product_no, float unit_input_price,
 																DateTime sale_date, string payment_method,
 																string empusname, int barcode, float prize)
 		{
@@ -68,6 +76,7 @@ namespace SupermarketManagementSystem.database
 					customer_no = customer_no,
 					sale_no = sale_no,
 					prize = prize,
+					unit_input_price = unit_input_price,
 					product_no = product_no,
 					sale_date = sale_date,
 					payment_method = payment_method,

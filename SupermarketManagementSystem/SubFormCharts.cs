@@ -33,14 +33,21 @@ namespace SupermarketManagementSystem
       
 
         public void SubFormCharts_Load(object sender, EventArgs e)
-        {                
-                var objChart = urunbazli.ChartAreas[0];
+        {                   
+            
+            List<DebitSale> debtSoldProducts = DebitSale.getallDSale();
+            int sayi = debtSoldProducts.Count;
+
+            List<CashSale> cashSoldProducts = CashSale.getallCSale();
+            int sayim = cashSoldProducts.Count;
+
+            var objChart = urunbazli.ChartAreas[0];
 
                 objChart.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
                 objChart.AxisX.LabelStyle.Format = "";
                 objChart.AxisX.LabelStyle.IsEndLabelVisible = true;
                 objChart.AxisX.Minimum = 0;
-                objChart.AxisX.Maximum = 51;
+                objChart.AxisX.Maximum = sayi+sayim+5;
                 objChart.AxisX.Interval = 1;
 
                 objChart.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
@@ -50,41 +57,79 @@ namespace SupermarketManagementSystem
                 objChart.AxisY.Maximum = 1.5;
                 objChart.AxisY.Interval = 0.2;
 
-                float kar = 0;
-                float zarar = 0;
+
 
                 DebitSale.getallDSale();
                 CashSale.getallCSale();
 
-            for (int j = 0; j < 9; j++)
+            for (int j = 0; j < (sayi+sayim) ; j++)
             {
-                int temp = DebitSale.getDebitSale(j).barcode;
-                float satis = Product.getProductbyBarcode(temp).price;
-                int temp2 = DebitSale.getDebitSale(j).barcode;
-                float giris = Product.getProductbyBarcode(temp2).unit_input_price;
+                float kar = 0;
+                float zarar = 0;
 
-                for (int i = 1; i < 51; i++)
+                float satis = debtSoldProducts[j].price;
+                float giris = debtSoldProducts[j].unit_input_price;
+
+                //float satisim = cashSoldProducts[j].price;
+                //float girisim = cashSoldProducts[j].unit_input_price;
+
+                if ((satis - giris) > 0)
                 {
-
-                    //float girdi_fiyati = Product.getProductbyBarcode(i).unit_input_price;
-                    //float satis_fiyati = Product.getProductbyBarcode(i).price;
-
-                    if ((satis - giris) > 0)
-                    {
-                        kar = satis - giris;
-                        urunbazli.Series["Kar"].Points.AddXY(i, kar);
-                    }
-                    else if ((satis - giris) < 0)
-                    {
-                        zarar = satis - giris;
-                        urunbazli.Series["Zarar"].Points.AddXY(i, zarar);
-                    }
-
+                    kar = satis - giris;
+                    urunbazli.Series["Kar"].Points.AddXY(j, kar);
                 }
-                //cmd.CommandType = CommandType.StoredProcedure;
-
-                //cmd.Parameters.AddWithValue("@unit_input_price", unit_input_price);
-                //cmd.Parameters.AddWithValue("@price", price);
+                else if ((satis - giris) < 0)
+                {
+                     zarar = satis - giris;
+                     urunbazli.Series["Zarar"].Points.AddXY(j, zarar);
+                }
+                /*else if((satisim - girisim) > 0 && satis == null)
+                {
+                    kar = satisim - girisim;
+                    urunbazli.Series["Kar"].Points.AddXY(j, kar);
+                }
+                else if((satisim - girisim) < 0 && satis == null)
+                {
+                    zarar = satisim - girisim;
+                    urunbazli.Series["Zarar"].Points.AddXY(j, zarar);
+                }
+                else if((satis - giris) > 0 && (satisim - girisim) > 0)
+                {
+                    kar = (satisim - girisim) + (satis - giris);
+                    urunbazli.Series["Kar"].Points.AddXY(j, kar);
+                }
+                else if((satis - giris) < 0 && (satisim - girisim) < 0)
+                {
+                    zarar = (satisim - girisim) + (satis + giris);
+                    urunbazli.Series["Zarar"].Points.AddXY(j, zarar);
+                }
+                else if((satis - giris) > 0 && (satisim - girisim) < 0)
+                {
+                    if((satis - giris) > (satisim - girisim))
+                    {
+                        kar = (satis - giris) - (satisim - girisim);
+                        urunbazli.Series["Kar"].Points.AddXY(j, kar);
+                    }
+                    else if((satis - giris) < (satisim - girisim))
+                    {
+                        zarar = (satisim - girisim) - (satis - giris);
+                        urunbazli.Series["Zarar"].Points.AddXY(j, zarar);
+                    }
+                }
+                else if((satis - giris) < 0 && (satisim - girisim) > 0)
+                {
+                    if ((satis - giris) > (satisim - girisim))
+                    { 
+                        zarar = (satis - giris) -(satisim - girisim) ;
+                        urunbazli.Series["Zarar"].Points.AddXY(j, zarar);
+                      
+                    }
+                    else if ((satis - giris) < (satisim - girisim))
+                    {
+                        kar = (satisim - girisim) - (satis - giris);
+                        urunbazli.Series["Kar"].Points.AddXY(j, kar);
+                    }
+                }*/
             }
         }
     }

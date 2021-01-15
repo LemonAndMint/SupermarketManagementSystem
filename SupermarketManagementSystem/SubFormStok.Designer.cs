@@ -70,10 +70,10 @@ namespace SupermarketManagementSystem
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(541, 475);
+            this.button1.Location = new System.Drawing.Point(634, 477);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(212, 64);
+            this.button1.Size = new System.Drawing.Size(212, 46);
             this.button1.TabIndex = 4;
             this.button1.Text = "DELETE";
             this.button1.UseVisualStyleBackColor = false;
@@ -87,12 +87,12 @@ namespace SupermarketManagementSystem
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(205)))), ((int)(((byte)(147)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(275, 118);
+            this.dataGridView1.Location = new System.Drawing.Point(270, 134);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(696, 303);
+            this.dataGridView1.Size = new System.Drawing.Size(668, 303);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -104,10 +104,10 @@ namespace SupermarketManagementSystem
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(275, 475);
+            this.button2.Location = new System.Drawing.Point(368, 477);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(212, 64);
+            this.button2.Size = new System.Drawing.Size(212, 46);
             this.button2.TabIndex = 6;
             this.button2.Text = "ADD";
             this.button2.UseVisualStyleBackColor = false;
@@ -116,9 +116,11 @@ namespace SupermarketManagementSystem
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 157);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(65)))), ((int)(((byte)(59)))));
+            this.label1.Location = new System.Drawing.Point(23, 151);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 17);
+            this.label1.Size = new System.Drawing.Size(88, 20);
             this.label1.TabIndex = 7;
             this.label1.Text = "Product No";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -126,9 +128,11 @@ namespace SupermarketManagementSystem
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 198);
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(65)))), ((int)(((byte)(59)))));
+            this.label3.Location = new System.Drawing.Point(21, 192);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 17);
+            this.label3.Size = new System.Drawing.Size(65, 20);
             this.label3.TabIndex = 8;
             this.label3.Text = "Barcode";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -136,9 +140,11 @@ namespace SupermarketManagementSystem
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 332);
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(65)))), ((int)(((byte)(59)))));
+            this.label4.Location = new System.Drawing.Point(23, 326);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 17);
+            this.label4.Size = new System.Drawing.Size(116, 20);
             this.label4.TabIndex = 9;
             this.label4.Text = "Unit Input Price";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -146,33 +152,40 @@ namespace SupermarketManagementSystem
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 289);
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(65)))), ((int)(((byte)(59)))));
+            this.label5.Location = new System.Drawing.Point(22, 283);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 17);
+            this.label5.Size = new System.Drawing.Size(64, 20);
             this.label5.TabIndex = 10;
             this.label5.Text = "Amount";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 246);
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(65)))), ((int)(((byte)(59)))));
+            this.label6.Location = new System.Drawing.Point(21, 240);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 17);
+            this.label6.Size = new System.Drawing.Size(108, 20);
             this.label6.TabIndex = 11;
             this.label6.Text = "Product Name";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(7, 372);
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(65)))), ((int)(((byte)(59)))));
+            this.label7.Location = new System.Drawing.Point(21, 366);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 17);
+            this.label7.Size = new System.Drawing.Size(91, 20);
             this.label7.TabIndex = 12;
             this.label7.Text = "Supplier No";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(119, 154);
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(205)))), ((int)(((byte)(147)))));
+            this.textBox1.Location = new System.Drawing.Point(138, 151);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 13;
@@ -180,7 +193,8 @@ namespace SupermarketManagementSystem
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(119, 195);
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(205)))), ((int)(((byte)(147)))));
+            this.textBox2.Location = new System.Drawing.Point(138, 192);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 22);
             this.textBox2.TabIndex = 14;
@@ -188,7 +202,8 @@ namespace SupermarketManagementSystem
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(119, 243);
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(205)))), ((int)(((byte)(147)))));
+            this.textBox3.Location = new System.Drawing.Point(138, 240);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 22);
             this.textBox3.TabIndex = 15;
@@ -196,7 +211,8 @@ namespace SupermarketManagementSystem
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(119, 289);
+            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(205)))), ((int)(((byte)(147)))));
+            this.textBox4.Location = new System.Drawing.Point(138, 286);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 22);
             this.textBox4.TabIndex = 16;
@@ -204,7 +220,8 @@ namespace SupermarketManagementSystem
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(119, 329);
+            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(205)))), ((int)(((byte)(147)))));
+            this.textBox5.Location = new System.Drawing.Point(138, 326);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 22);
             this.textBox5.TabIndex = 17;
@@ -212,7 +229,8 @@ namespace SupermarketManagementSystem
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(119, 369);
+            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(205)))), ((int)(((byte)(147)))));
+            this.textBox6.Location = new System.Drawing.Point(138, 366);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(100, 22);
             this.textBox6.TabIndex = 18;
@@ -220,7 +238,8 @@ namespace SupermarketManagementSystem
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(119, 415);
+            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(205)))), ((int)(((byte)(147)))));
+            this.textBox7.Location = new System.Drawing.Point(138, 412);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(100, 22);
             this.textBox7.TabIndex = 20;
@@ -229,9 +248,11 @@ namespace SupermarketManagementSystem
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 415);
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(65)))), ((int)(((byte)(59)))));
+            this.label8.Location = new System.Drawing.Point(26, 409);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 17);
+            this.label8.Size = new System.Drawing.Size(43, 20);
             this.label8.TabIndex = 19;
             this.label8.Text = "Price";
             // 

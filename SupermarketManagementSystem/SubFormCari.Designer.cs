@@ -48,11 +48,11 @@ namespace SupermarketManagementSystem
             // urun_barkod1
             // 
             this.urun_barkod1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(205)))), ((int)(((byte)(147)))));
+            this.urun_barkod1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.urun_barkod1.Location = new System.Drawing.Point(103, 167);
             this.urun_barkod1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.urun_barkod1.Multiline = true;
             this.urun_barkod1.Name = "urun_barkod1";
-            this.urun_barkod1.Size = new System.Drawing.Size(212, 64);
+            this.urun_barkod1.Size = new System.Drawing.Size(212, 38);
             this.urun_barkod1.TabIndex = 0;
             this.urun_barkod1.TextChanged += new System.EventHandler(this.urun_barkod1_TextChanged);
             this.urun_barkod1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.urun_barkod1_TextChanged_1);
@@ -74,14 +74,15 @@ namespace SupermarketManagementSystem
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(205)))), ((int)(((byte)(147)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(441, 167);
+            this.dataGridView1.Location = new System.Drawing.Point(418, 167);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(357, 305);
+            this.dataGridView1.Size = new System.Drawing.Size(427, 305);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseUp);
@@ -101,7 +102,7 @@ namespace SupermarketManagementSystem
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(100, 258);
+            this.label3.Location = new System.Drawing.Point(100, 274);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(178, 25);
             this.label3.TabIndex = 7;
@@ -110,11 +111,11 @@ namespace SupermarketManagementSystem
             // addCustomer
             // 
             this.addCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(205)))), ((int)(((byte)(147)))));
-            this.addCustomer.Location = new System.Drawing.Point(104, 286);
+            this.addCustomer.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.addCustomer.Location = new System.Drawing.Point(104, 302);
             this.addCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.addCustomer.Multiline = true;
             this.addCustomer.Name = "addCustomer";
-            this.addCustomer.Size = new System.Drawing.Size(212, 64);
+            this.addCustomer.Size = new System.Drawing.Size(212, 38);
             this.addCustomer.TabIndex = 6;
             this.addCustomer.TextChanged += new System.EventHandler(this.addCustomer_TextChanged);
             // 
@@ -149,10 +150,10 @@ namespace SupermarketManagementSystem
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(104, 408);
+            this.button1.Location = new System.Drawing.Point(104, 420);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(212, 64);
+            this.button1.Size = new System.Drawing.Size(212, 52);
             this.button1.TabIndex = 13;
             this.button1.Text = "CONFIRM";
             this.button1.UseVisualStyleBackColor = false;

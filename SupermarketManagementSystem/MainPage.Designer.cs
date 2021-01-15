@@ -395,6 +395,9 @@ namespace SupermarketManagementSystem
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.pictureBox2);
@@ -421,7 +424,7 @@ namespace SupermarketManagementSystem
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(122)))), ((int)(((byte)(91)))));
-            this.label2.Location = new System.Drawing.Point(325, 376);
+            this.label2.Location = new System.Drawing.Point(301, 376);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 35);
             this.label2.TabIndex = 2;

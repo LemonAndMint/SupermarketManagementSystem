@@ -59,7 +59,7 @@ namespace SupermarketManagementSystem
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(98, 155);
+            this.label2.Location = new System.Drawing.Point(91, 185);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(174, 25);
             this.label2.TabIndex = 4;
@@ -68,11 +68,11 @@ namespace SupermarketManagementSystem
             // urun_barkod1
             // 
             this.urun_barkod1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(205)))), ((int)(((byte)(147)))));
-            this.urun_barkod1.Location = new System.Drawing.Point(103, 194);
+            this.urun_barkod1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.urun_barkod1.Location = new System.Drawing.Point(96, 224);
             this.urun_barkod1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.urun_barkod1.Multiline = true;
             this.urun_barkod1.Name = "urun_barkod1";
-            this.urun_barkod1.Size = new System.Drawing.Size(212, 64);
+            this.urun_barkod1.Size = new System.Drawing.Size(212, 38);
             this.urun_barkod1.TabIndex = 3;
             this.urun_barkod1.TextChanged += new System.EventHandler(this.urun_barkod1_TextChanged);
             this.urun_barkod1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.urun_barkod1_TextChanged_1);
@@ -95,6 +95,7 @@ namespace SupermarketManagementSystem
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(205)))), ((int)(((byte)(147)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridView1.Location = new System.Drawing.Point(441, 167);
@@ -103,7 +104,7 @@ namespace SupermarketManagementSystem
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(357, 305);
+            this.dataGridView1.Size = new System.Drawing.Size(427, 305);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseUp);
@@ -141,10 +142,10 @@ namespace SupermarketManagementSystem
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(103, 337);
+            this.button1.Location = new System.Drawing.Point(96, 367);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(212, 64);
+            this.button1.Size = new System.Drawing.Size(212, 52);
             this.button1.TabIndex = 11;
             this.button1.Text = "CONFIRM";
             this.button1.UseVisualStyleBackColor = false;

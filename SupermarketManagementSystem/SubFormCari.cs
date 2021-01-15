@@ -61,7 +61,7 @@ namespace SupermarketManagementSystem
                     }
                     else
                     {
-                        table.Rows.Add(product.product_no, barcode, product.product_name, 1, product.unit_input_price ,product.prize);
+                        table.Rows.Add(product.product_no, barcode, product.product_name, 1, product.unit_input_price ,product.price);
                         dataGridView1.DataSource = table;
                         urun_barkod1.Text = "";
                         hesapla();

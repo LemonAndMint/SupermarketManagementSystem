@@ -9,12 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SupermarketManagementSystem.database;
+using SupermarketManagementSystem.database.sale;
 
 namespace SupermarketManagementSystem
 {
     public partial class SubFormCharts : Form
     {
-        public float prize { get; set; }
+        public float price { get; set; }
         public float unit_input_price { get; set; }
         public SubFormCharts()
         {
@@ -52,10 +53,13 @@ namespace SupermarketManagementSystem
                 float kar = 0;
                 float zarar = 0;
 
+                DebitSale.getallDSale();
+                CashSale.getallCSale();
+
             for (int j = 0; j < 9; j++)
             {
                 int temp = DebitSale.getDebitSale(j).barcode;
-                float satis = Product.getProductbyBarcode(temp).prize;
+                float satis = Product.getProductbyBarcode(temp).price;
                 int temp2 = DebitSale.getDebitSale(j).barcode;
                 float giris = Product.getProductbyBarcode(temp2).unit_input_price;
 
@@ -63,7 +67,7 @@ namespace SupermarketManagementSystem
                 {
 
                     //float girdi_fiyati = Product.getProductbyBarcode(i).unit_input_price;
-                    //float satis_fiyati = Product.getProductbyBarcode(i).prize;
+                    //float satis_fiyati = Product.getProductbyBarcode(i).price;
 
                     if ((satis - giris) > 0)
                     {
@@ -80,7 +84,7 @@ namespace SupermarketManagementSystem
                 //cmd.CommandType = CommandType.StoredProcedure;
 
                 //cmd.Parameters.AddWithValue("@unit_input_price", unit_input_price);
-                //cmd.Parameters.AddWithValue("@prize", prize);
+                //cmd.Parameters.AddWithValue("@price", price);
             }
         }
     }

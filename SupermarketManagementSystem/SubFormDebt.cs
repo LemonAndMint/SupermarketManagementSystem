@@ -45,7 +45,17 @@ namespace SupermarketManagementSystem
                     table.Rows.Add(row);
                 }
             }
+            hesapla();
 
+        }
+        public void hesapla()
+        {
+            float toplam = 0;
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                toplam += Convert.ToSingle(dataGridView1.Rows[i].Cells["Sale Price"].Value);
+            }
+            label5.Text = (toplam.ToString() + "₺");
         }
         public void loadDatabaseCustomerDebts()
         {

@@ -131,7 +131,7 @@ namespace SupermarketManagementSystem
             this.button7.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.button7.Size = new System.Drawing.Size(230, 40);
             this.button7.TabIndex = 3;
-            this.button7.Text = "Charts";
+            this.button7.Text = "Graphic";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
@@ -236,7 +236,7 @@ namespace SupermarketManagementSystem
             this.button4.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(230, 40);
             this.button4.TabIndex = 1;
-            this.button4.Text = "Peşin";
+            this.button4.Text = "Cash Sale";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -255,7 +255,7 @@ namespace SupermarketManagementSystem
             this.button3.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.button3.Size = new System.Drawing.Size(230, 40);
             this.button3.TabIndex = 0;
-            this.button3.Text = "Cari";
+            this.button3.Text = "Debt Sale";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -274,7 +274,7 @@ namespace SupermarketManagementSystem
             this.btnSatis.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.btnSatis.Size = new System.Drawing.Size(230, 60);
             this.btnSatis.TabIndex = 2;
-            this.btnSatis.Text = "Perakende Satış";
+            this.btnSatis.Text = "Sale";
             this.btnSatis.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSatis.UseVisualStyleBackColor = true;
             this.btnSatis.Click += new System.EventHandler(this.btnSatis_Click);

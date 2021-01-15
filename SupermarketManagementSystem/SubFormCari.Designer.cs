@@ -139,9 +139,9 @@ namespace SupermarketManagementSystem
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(65)))), ((int)(((byte)(59)))));
             this.label6.Location = new System.Drawing.Point(411, 42);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 41);
+            this.label6.Size = new System.Drawing.Size(169, 41);
             this.label6.TabIndex = 12;
-            this.label6.Text = "CARİ";
+            this.label6.Text = "DEBT SALE";
             // 
             // button1
             // 

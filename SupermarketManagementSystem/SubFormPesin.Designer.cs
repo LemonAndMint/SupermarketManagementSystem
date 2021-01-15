@@ -51,9 +51,9 @@ namespace SupermarketManagementSystem
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(65)))), ((int)(((byte)(59)))));
             this.label1.Location = new System.Drawing.Point(411, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 41);
+            this.label1.Size = new System.Drawing.Size(175, 41);
             this.label1.TabIndex = 2;
-            this.label1.Text = "PEŞİN";
+            this.label1.Text = "CASH SALE";
             // 
             // label2
             // 
@@ -131,9 +131,9 @@ namespace SupermarketManagementSystem
             this.label5.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.Location = new System.Drawing.Point(731, 542);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 32);
+            this.label5.Size = new System.Drawing.Size(43, 32);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Fiyat";
+            this.label5.Text = "0₺";
             // 
             // button1
             // 

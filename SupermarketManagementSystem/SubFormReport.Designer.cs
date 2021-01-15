@@ -64,12 +64,14 @@ namespace SupermarketManagementSystem
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(222)))), ((int)(((byte)(211)))));
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(122)))), ((int)(((byte)(91)))));
             this.label3.Location = new System.Drawing.Point(379, 149);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(187, 28);
+            this.label3.Size = new System.Drawing.Size(160, 28);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Müşteri Bazlı Rapor";
+            this.label3.Text = "Customer Based";
             // 
             // SubFormReport
             // 
